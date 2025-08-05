@@ -131,60 +131,131 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <div ref={heroTextRef}>
-              <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-                Build Your Digital <span className="gradient-text">Presence</span> Today
+              <div className="mb-4">
+                <span className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                  🚀 Your Digital Innovation Partner
+                </span>
+              </div>
+              <h1 className="text-5xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+                Creating Digital
+                <br />
+                <span className="gradient-text">Experiences</span> That
+                <br />
+                Drive <span className="text-blue-600">Growth</span>
               </h1>
             </div>
             <div ref={heroSubtextRef}>
-              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                We help startups and gaming companies create stunning websites, boost their SEO rankings, 
-                and grow their social media presence with our comprehensive digital solutions.
+              <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-2xl">
+                A comprehensive development agency specializing in <strong>Web Applications</strong>, 
+                <strong> Android Apps</strong>, <strong>Desktop Software</strong>, and <strong>College Projects</strong>. 
+                We transform your ideas into powerful digital solutions with cutting-edge technology.
               </p>
             </div>
             <div ref={heroButtonsRef} className="flex flex-col sm:flex-row gap-4">
               <a href="#contact" className="btn-primary text-center animated-btn">Start Your Project</a>
               <a href="#portfolio" className="btn-secondary text-center animated-btn">View Our Work</a>
             </div>
-            <div ref={heroStatsRef} className="mt-12 grid grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600 stat-number">50</div>
-                <div className="text-gray-600">Projects Completed</div>
+            <div ref={heroStatsRef} className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-6">
+              <div className="text-center bg-white/80 backdrop-blur-sm rounded-xl p-4 shadow-lg">
+                <div className="text-2xl font-bold text-blue-600 stat-number">100</div>
+                <div className="text-gray-600 text-sm">Projects Delivered</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600 stat-number">95</div>
-                <div className="text-gray-600">Client Satisfaction</div>
+              <div className="text-center bg-white/80 backdrop-blur-sm rounded-xl p-4 shadow-lg">
+                <div className="text-2xl font-bold text-purple-600 stat-number">50</div>
+                <div className="text-gray-600 text-sm">Mobile Apps</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600">24/7</div>
-                <div className="text-gray-600">Support Available</div>
+              <div className="text-center bg-white/80 backdrop-blur-sm rounded-xl p-4 shadow-lg">
+                <div className="text-2xl font-bold text-green-600 stat-number">25</div>
+                <div className="text-gray-600 text-sm">Desktop Apps</div>
+              </div>
+              <div className="text-center bg-white/80 backdrop-blur-sm rounded-xl p-4 shadow-lg">
+                <div className="text-2xl font-bold text-orange-600">24/7</div>
+                <div className="text-gray-600 text-sm">Support</div>
               </div>
             </div>
 
           </div>
           <div ref={heroGraphicRef}>
             <div className="relative">
-              <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 transform rotate-3 shadow-2xl">
-                <div className="bg-white rounded-lg p-6 transform -rotate-3">
-                  <div className="space-y-4">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
-                      <div className="w-3 h-3 bg-yellow-500 rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
-                      <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
-                    </div>
-                    <div className="space-y-3">
-                      <div className="h-4 bg-gray-200 rounded w-3/4 animate-pulse"></div>
-                      <div className="h-4 bg-blue-200 rounded w-1/2 animate-pulse"></div>
-                      <div className="h-4 bg-gray-200 rounded w-2/3 animate-pulse"></div>
-                      <div className="grid grid-cols-2 gap-4 mt-6">
-                        <div className="h-16 bg-gradient-to-r from-blue-100 to-blue-200 rounded animate-pulse"></div>
-                        <div className="h-16 bg-gradient-to-r from-purple-100 to-purple-200 rounded animate-pulse"></div>
+              {/* Main device mockup */}
+              <div className="relative z-10">
+                <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 rounded-3xl p-1 shadow-2xl transform rotate-2">
+                  <div className="bg-black rounded-3xl p-6">
+                    {/* Browser tabs */}
+                    <div className="flex items-center space-x-2 mb-4">
+                      <div className="flex space-x-2">
+                        <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                        <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                        <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                      </div>
+                      <div className="flex-1 bg-gray-800 rounded-lg px-4 py-1 ml-4">
+                        <div className="text-gray-400 text-xs">techcraft-agency.com</div>
                       </div>
                     </div>
-
+                    
+                    {/* Screen content */}
+                    <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-4 space-y-3">
+                      <div className="flex justify-between items-center">
+                        <div className="text-xs font-semibold text-gray-700">TechCraft Agency</div>
+                        <div className="flex space-x-1">
+                          <div className="w-2 h-2 bg-blue-500 rounded"></div>
+                          <div className="w-2 h-2 bg-purple-500 rounded"></div>
+                          <div className="w-2 h-2 bg-green-500 rounded"></div>
+                        </div>
+                      </div>
+                      
+                      <div className="grid grid-cols-2 gap-2">
+                        <div className="bg-white rounded-lg p-3 shadow-sm">
+                          <div className="w-6 h-6 bg-blue-500 rounded mb-2 flex items-center justify-center">
+                            <div className="text-white text-xs">🌐</div>
+                          </div>
+                          <div className="text-xs font-medium text-gray-700">Web Apps</div>
+                          <div className="w-full bg-blue-100 rounded-full h-1 mt-1">
+                            <div className="bg-blue-500 h-1 rounded-full w-3/4"></div>
+                          </div>
+                        </div>
+                        
+                        <div className="bg-white rounded-lg p-3 shadow-sm">
+                          <div className="w-6 h-6 bg-green-500 rounded mb-2 flex items-center justify-center">
+                            <div className="text-white text-xs">📱</div>
+                          </div>
+                          <div className="text-xs font-medium text-gray-700">Mobile Apps</div>
+                          <div className="w-full bg-green-100 rounded-full h-1 mt-1">
+                            <div className="bg-green-500 h-1 rounded-full w-4/5"></div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="grid grid-cols-2 gap-2">
+                        <div className="bg-white rounded-lg p-3 shadow-sm">
+                          <div className="w-6 h-6 bg-purple-500 rounded mb-2 flex items-center justify-center">
+                            <div className="text-white text-xs">💻</div>
+                          </div>
+                          <div className="text-xs font-medium text-gray-700">Desktop Apps</div>
+                          <div className="w-full bg-purple-100 rounded-full h-1 mt-1">
+                            <div className="bg-purple-500 h-1 rounded-full w-2/3"></div>
+                          </div>
+                        </div>
+                        
+                        <div className="bg-white rounded-lg p-3 shadow-sm">
+                          <div className="w-6 h-6 bg-orange-500 rounded mb-2 flex items-center justify-center">
+                            <div className="text-white text-xs">🎓</div>
+                          </div>
+                          <div className="text-xs font-medium text-gray-700">College Projects</div>
+                          <div className="w-full bg-orange-100 rounded-full h-1 mt-1">
+                            <div className="bg-orange-500 h-1 rounded-full w-full"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-
                 </div>
               </div>
+              
+              {/* Floating elements */}
+              <div className="absolute -top-6 -right-6 w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full opacity-70 animate-pulse"></div>
+              <div className="absolute -bottom-4 -left-4 w-8 h-8 bg-gradient-to-r from-green-500 to-blue-500 rounded-full opacity-60 animate-pulse" style={{animationDelay: '1s'}}></div>
+              <div className="absolute top-1/2 -right-8 w-6 h-6 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full opacity-50 animate-pulse" style={{animationDelay: '2s'}}></div>
             </div>
           </div>
         </div>
