@@ -11,6 +11,7 @@ import {
   ArrowTopRightOnSquareIcon,
   SparklesIcon
 } from '@heroicons/react/24/outline';
+import { CardSkeleton } from '@/components/ui/Skeleton';
 
 // Register GSAP plugins
 if (typeof window !== 'undefined') {
@@ -20,6 +21,7 @@ if (typeof window !== 'undefined') {
 const Portfolio = () => {
   const portfolioRef = useRef<HTMLElement>(null);
   const [activeFilter, setActiveFilter] = useState('All');
+  const [isLoading, setIsLoading] = useState(true);
 
   const portfolio = [
     {
@@ -85,7 +87,12 @@ const Portfolio = () => {
     : portfolio.filter(project => project.category === activeFilter);
 
   useEffect(() => {
-    if (typeof window !== 'undefined' && portfolioRef.current) {
+    // Simulate data loading
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1200);
+
+    if (typeof window !== 'undefined' && portfolioRef.current && !isLoading) {
       gsap.fromTo(Array.from(portfolioRef.current.children), {
         opacity: 0,
         y: 50
@@ -125,10 +132,13 @@ const Portfolio = () => {
       });
 
       return () => {
+        clearTimeout(timer);
         ScrollTrigger.getAll().forEach(trigger => trigger.kill());
       };
     }
-  }, []);
+
+    return () => clearTimeout(timer);
+  }, [isLoading]);
 
   return (
     <section id="portfolio" ref={portfolioRef} className="section-padding bg-gray-50">
@@ -168,7 +178,17 @@ const Portfolio = () => {
         </div>
         
         <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
-          {filteredPortfolio.map((project, index) => (
+          {isLoading ? (
+            <>
+              <CardSkeleton />
+              <CardSkeleton />
+              <CardSkeleton />
+              <CardSkeleton />
+              <CardSkeleton />
+              <CardSkeleton />
+            </>
+          ) : (
+            filteredPortfolio.map((project, index) => (
             <div key={index} className="group portfolio-card">
               <div className="relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
@@ -210,7 +230,8 @@ const Portfolio = () => {
                 </div>
               </div>
             </div>
-          ))}
+            ))
+          )}
         </div>
 
         {/* Call to Action */}
@@ -220,7 +241,7 @@ const Portfolio = () => {
               Ready to Start Your <span className="gradient-text">Project</span>?
             </h3>
             <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-              Let's discuss your ideas and bring them to life with our expertise in modern technologies
+              Let&apos;s discuss your ideas and bring them to life with our expertise in modern technologies
             </p>
             <a href="#contact" className="btn-primary inline-flex items-center space-x-2">
               <span>Get Started Today</span>
