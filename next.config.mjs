@@ -1,4 +1,4 @@
-/** @type {import('next').NextConfig} */
+/** @type {import('next').NextConfig} */ // 이미지 최적화 설정
 const nextConfig = {
   images: {
     remotePatterns: [
