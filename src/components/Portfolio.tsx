@@ -1,26 +1,27 @@
-'use client';
+"use client";
 
-import React, { useEffect, useRef, useState } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { 
+import React, { useEffect, useRef, useState } from "react";
+import Image from "next/image";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import {
   CodeBracketIcon,
   DevicePhoneMobileIcon,
   ComputerDesktopIcon,
   AcademicCapIcon,
   ArrowTopRightOnSquareIcon,
-  SparklesIcon
-} from '@heroicons/react/24/outline';
-import { CardSkeleton } from '@/components/ui/Skeleton';
+  SparklesIcon,
+} from "@heroicons/react/24/outline";
+import { CardSkeleton } from "@/components/ui/Skeleton";
 
 // Register GSAP plugins
-if (typeof window !== 'undefined') {
+if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
 const Portfolio = () => {
   const portfolioRef = useRef<HTMLElement>(null);
-  const [activeFilter, setActiveFilter] = useState('All');
+  const [activeFilter, setActiveFilter] = useState("All");
   const [isLoading, setIsLoading] = useState(true);
 
   const portfolio = [
@@ -28,63 +29,85 @@ const Portfolio = () => {
       title: "E-commerce Dashboard",
       category: "Web Application",
       type: "web",
-      tech: ["React", "Node.js", "MongoDB"],
-      description: "Full-stack e-commerce management system with real-time analytics",
+      tech: ["React", "Node.js", "MongoDB", "Stripe"],
+      description:
+        "Modern e-commerce platform with advanced analytics, inventory management, and seamless payment integration",
       gradient: "from-blue-500 to-cyan-500",
-      icon: <CodeBracketIcon className="h-6 w-6" />
+      icon: <CodeBracketIcon className="h-6 w-6" />,
+      image: "https://cdn.dribbble.com/userupload/10924024/file/original-313341b8afc54b7fd55a62e7c05b58b4.png?resize=2048x1536&vertical=center",
+      features: ["Real-time Analytics", "Payment Gateway", "Inventory Management", "Multi-vendor Support"],
     },
     {
-      title: "Task Management App",
-      category: "Android Application",
-      type: "mobile",
-      tech: ["React Native", "Firebase", "Redux"],
-      description: "Productivity app with collaborative features and offline sync",
+      title: "Task Management System",
+      category: "Web Application",
+      type: "web",
+      tech: ["React", "Node.js", "PostgreSQL", "Socket.io"],
+      description:
+        "Collaborative task management platform with real-time updates, team collaboration, and advanced project tracking",
       gradient: "from-green-500 to-emerald-500",
-      icon: <DevicePhoneMobileIcon className="h-6 w-6" />
+      icon: <CodeBracketIcon className="h-6 w-6" />,
+      image: "https://cdn.dribbble.com/userupload/16605258/file/original-36889bf7f1c4a8e4cff085e71ac8d408.png?resize=2048x1536&vertical=center",
+      features: ["Real-time Collaboration", "Project Tracking", "Team Management", "Deadline Alerts"],
     },
     {
-      title: "Inventory System",
+      title: "Inventory Management System",
       category: "Desktop Application",
       type: "desktop",
-      tech: ["Electron", "SQLite", "Chart.js"],
-      description: "Cross-platform inventory management with reporting dashboard",
+      tech: ["Electron", "SQLite", "Chart.js", "Node.js"],
+      description:
+        "Comprehensive inventory management solution with advanced reporting, stock tracking, and supplier management",
       gradient: "from-purple-500 to-violet-500",
-      icon: <ComputerDesktopIcon className="h-6 w-6" />
+      icon: <ComputerDesktopIcon className="h-6 w-6" />,
+      image: "https://cdn.dribbble.com/userupload/37420944/file/original-d2d2ad39ad2d7fba636f8c0c68204dd8.jpg?resize=1504x1128&vertical=center",
+      features: ["Stock Management", "Supplier Tracking", "Reports & Analytics", "Multi-location Support"],
     },
     {
-      title: "Student Portal",
+      title: "Student Management Portal",
       category: "College Project",
       type: "college",
-      tech: ["PHP", "MySQL", "Bootstrap"],
-      description: "Complete student management system with grade tracking",
+      tech: ["React", "Node.js", "MySQL", "JWT"],
+      description: "Complete student information system with grade management, attendance tracking, and parent portal",
       gradient: "from-orange-500 to-red-500",
-      icon: <AcademicCapIcon className="h-6 w-6" />
+      icon: <AcademicCapIcon className="h-6 w-6" />,
+      image: "https://cdn.dribbble.com/userupload/35226367/file/original-bed5129538f3a55e0d1b1e4aaa279caa.png?resize=2048x1536&vertical=center",
+      features: ["Grade Management", "Attendance Tracking", "Parent Portal", "Course Scheduling"],
     },
     {
       title: "Real Estate Platform",
       category: "Web Application",
       type: "web",
-      tech: ["Next.js", "Prisma", "PostgreSQL"],
-      description: "Property listing platform with advanced search and filters",
-      gradient: "from-indigo-500 to-purple-500",
-      icon: <CodeBracketIcon className="h-6 w-6" />
+      tech: ["Next.js", "Prisma", "PostgreSQL", "Mapbox"],
+      description: "Modern property listing platform with advanced search, virtual tours, and integrated map functionality",
+      gradient: "from-indigo-500 to-blue-500",
+      icon: <CodeBracketIcon className="h-6 w-6" />,
+      image: "https://cdn.dribbble.com/userupload/7890447/file/original-f9ec107e283b8b6ba963ce5a572b25d7.png?resize=2048x1536&vertical=center",
+      features: ["Property Listings", "Virtual Tours", "Map Integration", "Mortgage Calculator"],
     },
     {
-      title: "Fitness Tracker",
+      title: "Fitness Tracker Mobile App",
       category: "Android Application",
       type: "mobile",
-      tech: ["Flutter", "Dart", "SQLite"],
-      description: "Health and fitness tracking app with workout plans",
+      tech: ["React Native", "Firebase", "HealthKit", "Charts"],
+      description: "Comprehensive fitness and health tracking app with workout plans, nutrition tracking, and progress analytics",
       gradient: "from-pink-500 to-rose-500",
-      icon: <DevicePhoneMobileIcon className="h-6 w-6" />
-    }
+      icon: <DevicePhoneMobileIcon className="h-6 w-6" />,
+      image: "https://cdn.dribbble.com/userupload/44055925/file/original-e207e27cedcc38cc81a10876ca628bd4.png?resize=2048x1536&vertical=center",
+      features: ["Workout Tracking", "Nutrition Monitoring", "Progress Analytics", "Social Challenges"],
+    },
   ];
 
-  const filters = ['All', 'Web Application', 'Android Application', 'Desktop Application', 'College Project'];
+  const filters = [
+    "All",
+    "Web Application",
+    "Android Application",
+    "Desktop Application",
+    "College Project",
+  ];
 
-  const filteredPortfolio = activeFilter === 'All' 
-    ? portfolio 
-    : portfolio.filter(project => project.category === activeFilter);
+  const filteredPortfolio =
+    activeFilter === "All"
+      ? portfolio
+      : portfolio.filter((project) => project.category === activeFilter);
 
   useEffect(() => {
     // Simulate data loading
@@ -92,48 +115,56 @@ const Portfolio = () => {
       setIsLoading(false);
     }, 1200);
 
-    if (typeof window !== 'undefined' && portfolioRef.current && !isLoading) {
-      gsap.fromTo(Array.from(portfolioRef.current.children), {
-        opacity: 0,
-        y: 50
-      }, {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        stagger: 0.2,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: portfolioRef.current,
-          start: "top 80%",
-          end: "bottom 20%",
-          toggleActions: "play none none reverse"
-        }
-      });
-
-      // Portfolio cards animations
-      const portfolioCards = document.querySelectorAll('.portfolio-card');
-      portfolioCards.forEach((card, index) => {
-        gsap.fromTo(card, {
+    if (typeof window !== "undefined" && portfolioRef.current && !isLoading) {
+      gsap.fromTo(
+        Array.from(portfolioRef.current.children),
+        {
           opacity: 0,
-          rotationY: 45,
-          transformOrigin: "left center"
-        }, {
+          y: 50,
+        },
+        {
           opacity: 1,
-          rotationY: 0,
+          y: 0,
           duration: 1,
-          delay: index * 0.3,
+          stagger: 0.2,
           ease: "power3.out",
           scrollTrigger: {
-            trigger: card,
-            start: "top 85%",
-            toggleActions: "play none none reverse"
+            trigger: portfolioRef.current,
+            start: "top 80%",
+            end: "bottom 20%",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+
+      // Portfolio cards animations
+      const portfolioCards = document.querySelectorAll(".portfolio-card");
+      portfolioCards.forEach((card, index) => {
+        gsap.fromTo(
+          card,
+          {
+            opacity: 0,
+            rotationY: 45,
+            transformOrigin: "left center",
+          },
+          {
+            opacity: 1,
+            rotationY: 0,
+            duration: 1,
+            delay: index * 0.3,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: card,
+              start: "top 85%",
+              toggleActions: "play none none reverse",
+            },
           }
-        });
+        );
       });
 
       return () => {
         clearTimeout(timer);
-        ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+        ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
       };
     }
 
@@ -141,23 +172,42 @@ const Portfolio = () => {
   }, [isLoading]);
 
   return (
-    <section id="portfolio" ref={portfolioRef} className="section-padding bg-gray-50">
+    <section
+      id="portfolio"
+      ref={portfolioRef}
+      className="section-padding bg-gray-50"
+    >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <div className="mb-4">
-            <span className="inline-flex items-center bg-gradient-to-r from-green-600 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-              <SparklesIcon className="h-4 w-4 mr-2" />
-              Our Work
+          <div className="mb-6">
+            <span className="inline-flex items-center bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white px-6 py-3 rounded-full text-sm font-semibold shadow-lg">
+              <SparklesIcon className="h-5 w-5 mr-2" />
+              Our Portfolio
             </span>
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
             Showcasing Our
             <br />
-            <span className="gradient-text">Digital Creations</span>
+            <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+              Digital Masterpieces
+            </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Explore our diverse portfolio of web applications, mobile apps, desktop software, and college projects
+          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            Discover our carefully crafted solutions spanning web applications, mobile experiences, 
+            desktop software, and innovative college projects that drive real results
           </p>
+          
+          {/* Stats */}
+          <div className="flex items-center justify-center space-x-8 mt-8 text-sm text-gray-500">
+            <div className="flex items-center space-x-2">
+              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+              <span>20+ Projects Delivered</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+              <span>100% Client Satisfaction</span>
+            </div>
+          </div>
         </div>
 
         {/* Filter Buttons */}
@@ -168,16 +218,16 @@ const Portfolio = () => {
               onClick={() => setActiveFilter(filter)}
               className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
                 activeFilter === filter
-                  ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg"
+                  : "bg-gray-100 text-gray-700 hover:bg-gray-200"
               }`}
             >
               {filter}
             </button>
           ))}
         </div>
-        
-        <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
+
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8">
           {isLoading ? (
             <>
               <CardSkeleton />
@@ -189,47 +239,97 @@ const Portfolio = () => {
             </>
           ) : (
             filteredPortfolio.map((project, index) => (
-            <div key={index} className="group portfolio-card">
-              <div className="relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
-                <div className="relative bg-white rounded-2xl overflow-hidden shadow-modern">
-                  {/* Project Header */}
-                  <div className={`h-48 bg-gradient-to-br ${project.gradient} flex items-center justify-center relative overflow-hidden`}>
-                    <div className="text-center text-white">
-                      <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4">
-                        {project.icon}
-                      </div>
-                      <div className="text-lg font-semibold">{project.category}</div>
-                    </div>
-                    <div className="absolute top-4 right-4">
-                      <ArrowTopRightOnSquareIcon className="h-5 w-5 text-white/70 group-hover:text-white transition-colors" />
-                    </div>
-                    
-                    {/* Floating elements */}
-                    <div className="absolute -top-6 -right-6 w-12 h-12 bg-white/10 rounded-full animate-pulse"></div>
-                    <div className="absolute -bottom-4 -left-4 w-8 h-8 bg-white/10 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
-                  </div>
+              <div key={index} className="group portfolio-card">
+                <div className="relative overflow-hidden h-full">
+                  {/* Glowing border effect */}
+                  <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-3xl blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
                   
-                  {/* Project Content */}
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold mb-3 text-gray-900">{project.title}</h3>
-                    <p className="text-gray-600 mb-4 leading-relaxed">{project.description}</p>
-                    
-                    {/* Tech Stack */}
-                    <div className="flex flex-wrap gap-2">
-                      {project.tech.map((tech, techIndex) => (
-                        <span
-                          key={techIndex}
-                          className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full font-medium"
-                        >
-                          {tech}
-                        </span>
-                      ))}
+                  <div className="relative bg-white rounded-3xl overflow-hidden shadow-2xl h-full flex flex-col transform group-hover:scale-[1.02] transition-all duration-500">
+                    {/* Project Image */}
+                    <div className="relative h-56 overflow-hidden">
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        fill
+                        className="object-cover object-center transform group-hover:scale-110 transition-transform duration-700"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        priority={index < 3}
+                      />
+                      {/* Gradient overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      
+                      {/* Category badge */}
+                      <div className="absolute top-4 left-4">
+                        <div className={`bg-gradient-to-r ${project.gradient} px-4 py-2 rounded-full backdrop-blur-sm`}>
+                          <div className="flex items-center text-white text-sm font-semibold">
+                            {project.icon}
+                            <span className="ml-2">{project.category}</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* View project button */}
+                      <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                        <div className="w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg hover:bg-white transition-colors cursor-pointer">
+                          <ArrowTopRightOnSquareIcon className="h-5 w-5 text-gray-800" />
+                        </div>
+                      </div>
+
+                      {/* Floating particles */}
+                      <div className="absolute top-6 right-16 w-2 h-2 bg-white/30 rounded-full animate-ping"></div>
+                      <div className="absolute bottom-8 left-6 w-1 h-1 bg-white/40 rounded-full animate-pulse" style={{ animationDelay: "1s" }}></div>
+                    </div>
+
+                    {/* Project Content */}
+                    <div className="p-6 flex-1 flex flex-col">
+                      <h3 className="text-xl font-bold mb-3 text-gray-900 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 transition-all duration-300">
+                        {project.title}
+                      </h3>
+                      <p className="text-gray-600 mb-4 leading-relaxed flex-1">
+                        {project.description}
+                      </p>
+
+                      {/* Features list */}
+                      <div className="mb-4">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-1 text-sm">
+                          {project.features.slice(0, 4).map((feature, featureIndex) => (
+                            <div key={featureIndex} className="flex items-center text-gray-600">
+                              <div className="w-1.5 h-1.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mr-2 flex-shrink-0"></div>
+                              <span className="truncate">{feature}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Tech Stack */}
+                      <div className="flex flex-wrap gap-2">
+                        {project.tech.map((tech, techIndex) => (
+                          <span
+                            key={techIndex}
+                            className="px-3 py-1.5 bg-gradient-to-r from-gray-50 to-gray-100 text-gray-700 text-xs rounded-full font-medium border border-gray-200 hover:border-blue-300 hover:shadow-sm transition-all duration-200"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+
+                      {/* Bottom action area */}
+                      <div className="mt-4 pt-4 border-t border-gray-100">
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center space-x-2 text-sm text-gray-500">
+                            <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                            <span>Live Project</span>
+                          </div>
+                          <button className="text-blue-600 hover:text-blue-700 text-sm font-semibold flex items-center space-x-1 group/btn">
+                            <span>View Details</span>
+                            <ArrowTopRightOnSquareIcon className="h-4 w-4 transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
+                          </button>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
             ))
           )}
         </div>
@@ -238,12 +338,17 @@ const Portfolio = () => {
         <div className="text-center mt-16">
           <div className="bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 rounded-3xl p-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Ready to Start Your <span className="gradient-text">Project</span>?
+              Ready to Start Your <span className="gradient-text">Project</span>
+              ?
             </h3>
             <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-              Let&apos;s discuss your ideas and bring them to life with our expertise in modern technologies
+              Let&apos;s discuss your ideas and bring them to life with our
+              expertise in modern technologies
             </p>
-            <a href="#contact" className="btn-primary inline-flex items-center space-x-2">
+            <a
+              href="#contact"
+              className="btn-primary inline-flex items-center space-x-2"
+            >
               <span>Get Started Today</span>
               <ArrowTopRightOnSquareIcon className="h-5 w-5" />
             </a>
@@ -254,4 +359,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio; 
+export default Portfolio;
