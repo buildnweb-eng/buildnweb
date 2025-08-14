@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import BackToTop from "@/components/ui/BackToTop";
+import { ToastProvider } from "@/components/ui/Toast";
 import { 
   CheckIcon,
   PhoneIcon,
@@ -114,7 +118,9 @@ const packages = [
 
 export default function ServiceBusinessWebsites() {
   return (
-    <main className="min-h-screen">
+    <ToastProvider>
+      <Header />
+      <main className="min-h-screen">
       {/* Hero Section */}
       <section className="pt-24 pb-12 bg-gradient-to-br from-brand-success-light to-brand-primary-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -398,5 +404,8 @@ export default function ServiceBusinessWebsites() {
         </div>
       </section>
     </main>
+    <Footer />
+    <BackToTop />
+    </ToastProvider>
   );
 }
