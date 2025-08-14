@@ -30,74 +30,74 @@ const About = () => {
     {
       step: "Step 1",
       days: "Day 1-2",
-      title: "Discovery & Audit",
+      title: "SaaS Audit & Strategy",
       description:
-        "Deep dive into your business, competitors, and current digital presence",
+        "Deep dive into your current conversion funnel and demo booking process",
       icon: <MagnifyingGlassIcon className="h-8 w-8 text-blue-600" />,
       whatWeDo: [
-        "Free 10-minute digital audit call",
-        "Competitor analysis & market research",
-        "Current website & social media audit",
-        "Business goals & target audience mapping",
+        "Free conversion audit call",
+        "SaaS competitor analysis",
+        "Demo booking funnel audit",
+        "ICP & messaging optimization",
       ],
-      deliverable: "Comprehensive digital strategy document",
+      deliverable: "SaaS growth strategy document",
       gradient: "from-blue-500 to-cyan-500",
     },
     {
       step: "Step 2",
       days: "Day 3-4",
-      title: "Strategy & Planning",
+      title: "Conversion Blueprint",
       description:
-        "Custom strategy blueprint based on 50 years of proven methodologies",
+        "Custom conversion strategy based on proven SaaS growth frameworks",
       icon: <ClipboardDocumentListIcon className="h-8 w-8 text-purple-600" />,
       whatWeDo: [
-        "Custom marketing strategy development",
-        "Content calendar & campaign planning",
-        "Technical architecture & design wireframes",
-        "Timeline & milestone planning",
+        "Demo booking optimization strategy",
+        "Conversion funnel wireframes",
+        "A/B testing plan setup",
+        "Analytics & tracking blueprint",
       ],
-      deliverable: "Detailed project roadmap with timelines",
+      deliverable: "Conversion-optimized wireframes",
       gradient: "from-purple-500 to-violet-500",
     },
     {
       step: "Step 3",
       days: "Day 5-6",
-      title: "Design & Development",
-      description: "Rapid execution using our refined 7-day delivery system",
+      title: "Revenue-Focused Build",
+      description: "High-converting SaaS website built for demo bookings",
       icon: <ComputerDesktopIcon className="h-8 w-8 text-green-600" />,
       whatWeDo: [
-        "Custom design & user experience optimization",
-        "Responsive website/store development",
-        "SEO optimization & technical setup",
-        "Integration with analytics & tracking",
+        "Conversion-optimized design",
+        "Demo booking forms & CTAs",
+        "Lead scoring integration",
+        "Analytics & heat map setup",
       ],
-      deliverable: "Fully functional website/store ready for launch",
+      deliverable: "Demo-ready SaaS website",
       gradient: "from-green-500 to-emerald-500",
     },
     {
       step: "Step 4",
       days: "Day 7",
-      title: "Launch & Optimize",
+      title: "Launch & Guarantee",
       description:
-        "Go live with comprehensive testing and immediate optimization",
+        "Go live with ROI guarantee and immediate conversion tracking",
       icon: <RocketLaunchIcon className="h-8 w-8 text-orange-600" />,
       whatWeDo: [
-        "Final testing & quality assurance",
-        "Domain setup & DNS configuration",
-        "Analytics & tracking implementation",
-        "Initial SEO & social media setup",
+        "Demo booking testing",
+        "Conversion tracking setup",
+        "ROI measurement baseline",
+        "Guarantee activation",
       ],
-      deliverable: "Live website with full analytics setup",
+      deliverable: "Live SaaS site with ROI tracking",
       gradient: "from-orange-500 to-red-500",
     },
     {
       step: "Step 5",
-      days: "Ongoing",
-      title: "Growth & Scale",
-      description: "Continuous optimization and scaling based on real data",
+      days: "30-Day",
+      title: "ROI Validation",
+      description: "Measure and optimize for guaranteed revenue growth",
       icon: <ChartBarIcon className="h-8 w-8 text-indigo-600" />,
       whatWeDo: [
-        "Performance monitoring & reporting",
+        "Demo booking optimization",
         "A/B testing & conversion optimization",
         "Content marketing & social media management",
         "Paid advertising campaign management",
@@ -262,18 +262,29 @@ const About = () => {
           <div className="text-center">
             <h3 className="text-3xl font-bold text-gray-900 mb-6">
               Our{" "}
-              <span className="gradient-text">7-Day Delivery Guarantee</span>
+              <span className="gradient-text">ROI Guarantee</span>
             </h3>
             <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed mb-8">
-              50 years of experience means we&apos;ve perfected our process.
-              Your project launches in 7 days, or you don&apos;t pay.
+              We guarantee measurable revenue growth within 30 days, or we'll refund your investment and optimize for free until you see results.
             </p>
+            <div className="bg-white rounded-xl p-6 border border-green-200 max-w-2xl mx-auto mb-8">
+              <div className="flex items-center justify-center space-x-3 mb-3">
+                <ShieldCheckIcon className="h-6 w-6 text-green-600" />
+                <span className="font-bold text-green-800">Money-Back Guarantee Terms</span>
+              </div>
+              <ul className="text-sm text-gray-700 space-y-1">
+                <li>• 7-day launch or full refund</li>
+                <li>• 30-day ROI measurement period</li>
+                <li>• Free optimization until results achieved</li>
+                <li>• No hidden fees or long-term contracts</li>
+              </ul>
+            </div>
             <div className="grid md:grid-cols-3 gap-8 mt-12">
               <div className="text-center">
                 <div className="text-4xl font-bold text-green-600 mb-2">
-                  100%
+                  3x
                 </div>
-                <div className="text-gray-600">On-Time Delivery</div>
+                <div className="text-gray-600">Demo Bookings</div>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-blue-600 mb-2">
@@ -283,9 +294,9 @@ const About = () => {
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-purple-600 mb-2">
-                  24/7
+                  30 Days
                 </div>
-                <div className="text-gray-600">Project Updates</div>
+                <div className="text-gray-600">ROI Validation</div>
               </div>
             </div>
           </div>
@@ -296,7 +307,7 @@ const About = () => {
           <div className="mb-4">
             <span className="inline-flex items-center bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
               <SparklesIcon className="h-4 w-4 mr-2" />
-              About Our Agency
+              SaaS Growth Specialists
             </span>
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">

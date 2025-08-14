@@ -29,99 +29,30 @@ const Testimonials = () => {
   const industryLeaders = [
     {
       id: 1,
-      name: "TechNova Solutions",
+      name: "CloudSync SaaS",
       industry: "SaaS",
-      partnership: "1 year",
+      partnership: "3x demo bookings",
+      metric: "+285% revenue",
       icon: <RocketLaunchIcon className="h-8 w-8 text-blue-600" />,
       gradient: "from-blue-500 to-cyan-500",
     },
     {
       id: 2,
-      name: "Heritage Handicrafts",
-      industry: "E-commerce",
-      partnership: "3 years",
+      name: "TechFlow Analytics",
+      industry: "B2B SaaS",
+      partnership: "2x conversion rate",
+      metric: "+180% ARR",
       icon: <HeartIcon className="h-8 w-8 text-red-600" />,
       gradient: "from-red-500 to-pink-500",
     },
     {
       id: 3,
-      name: "MedCare Clinics",
-      industry: "Healthcare",
-      partnership: "2 years",
+      name: "DataVault Pro",
+      industry: "Enterprise SaaS",
+      partnership: "5x lead quality",
+      metric: "+420% pipeline",
       icon: <AcademicCapIcon className="h-8 w-8 text-green-600" />,
       gradient: "from-green-500 to-emerald-500",
-    },
-    {
-      id: 4,
-      name: "EduTech Institute",
-      industry: "Education",
-      partnership: "2 years",
-      icon: <AcademicCapIcon className="h-8 w-8 text-purple-600" />,
-      gradient: "from-purple-500 to-violet-500",
-    },
-    {
-      id: 5,
-      name: "FinanceFirst",
-      industry: "Finance",
-      partnership: "31 years",
-      icon: <CurrencyDollarIcon className="h-8 w-8 text-yellow-600" />,
-      gradient: "from-yellow-500 to-orange-500",
-    },
-    {
-      id: 6,
-      name: "GreenEarth Organic",
-      industry: "Organic Foods",
-      partnership: "1 year",
-      icon: <SparklesIcon className="h-8 w-8 text-green-600" />,
-      gradient: "from-green-500 to-teal-500",
-    },
-    {
-      id: 7,
-      name: "AutoMax Dealers",
-      industry: "Automotive",
-      partnership: "25 years",
-      icon: <TruckIcon className="h-8 w-8 text-gray-600" />,
-      gradient: "from-gray-500 to-slate-500",
-    },
-    {
-      id: 8,
-      name: "BuildRight Construction",
-      industry: "Construction",
-      partnership: "3 years",
-      icon: <WrenchScrewdriverIcon className="h-8 w-8 text-orange-600" />,
-      gradient: "from-orange-500 to-red-500",
-    },
-    {
-      id: 9,
-      name: "FashionForward",
-      industry: "Fashion",
-      partnership: "1 year",
-      icon: <ShoppingBagIcon className="h-8 w-8 text-pink-600" />,
-      gradient: "from-pink-500 to-rose-500",
-    },
-    {
-      id: 10,
-      name: "TechRepair Pro",
-      industry: "Tech Services",
-      partnership: "12 years",
-      icon: <WrenchScrewdriverIcon className="h-8 w-8 text-blue-600" />,
-      gradient: "from-blue-500 to-indigo-500",
-    },
-    {
-      id: 11,
-      name: "FoodieDelight",
-      industry: "Food & Beverage",
-      partnership: "2 years",
-      icon: <ShoppingBagIcon className="h-8 w-8 text-orange-600" />,
-      gradient: "from-orange-500 to-amber-500",
-    },
-    {
-      id: 12,
-      name: "WellnessHub",
-      industry: "Fitness",
-      partnership: "2 years",
-      icon: <FireIcon className="h-8 w-8 text-red-600" />,
-      gradient: "from-red-500 to-orange-500",
     },
   ];
 
@@ -189,23 +120,22 @@ const Testimonials = () => {
           <div className="mb-4">
             <span className="inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
               <SparklesIcon className="h-4 w-4 mr-2" />
-              Trusted by Industry Leaders
+              Proven SaaS Growth Results
             </span>
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Across Hyderabad & Beyond
+            Real SaaS Companies,
             <br />
-            <span className="gradient-text">5 Years of Partnerships</span>
+            <span className="gradient-text">Real Revenue Growth</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            From startups to enterprise, we&apos;ve helped businesses across
-            industries achieve remarkable digital transformation and revenue
-            growth.
+            See how our SaaS clients achieved 3x demo bookings and measurable revenue growth
+            with our conversion-optimized websites.
           </p>
         </div>
 
         {/* Industry Leaders Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {industryLeaders.map((leader, index) => (
             <div key={leader.id} className="industry-card group hover-lift">
               <div className="relative">
@@ -229,8 +159,11 @@ const Testimonials = () => {
                   <p className="text-gray-600 text-sm mb-2">
                     {leader.industry}
                   </p>
-                  <div className="text-xs text-gray-500">
-                    {leader.partnership} partnership
+                  <div className="text-sm font-semibold text-blue-600 mb-1">
+                    {leader.partnership}
+                  </div>
+                  <div className="text-xs text-green-600 font-medium">
+                    {leader.metric}
                   </div>
                 </div>
               </div>
@@ -242,38 +175,38 @@ const Testimonials = () => {
         <div className="bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 rounded-3xl p-12">
           <div className="text-center mb-8">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              <span className="gradient-text">50+</span> Active Clients
+              <span className="gradient-text">SaaS Growth</span> Specialists
             </h3>
             <p className="text-lg text-gray-600">
-              Serving <span className="font-semibold">10+ industries</span> with
-              a <span className="font-semibold">98% retention rate</span>
+              Focusing on <span className="font-semibold">revenue-driven results</span> with
+              a <span className="font-semibold">7-day launch guarantee</span>
             </p>
           </div>
 
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-4xl font-bold text-blue-600 mb-2 stat-number">
-                50+
+                3x
               </div>
-              <div className="text-gray-600">Active Clients</div>
+              <div className="text-gray-600">Demo Bookings</div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-green-600 mb-2 stat-number">
-                10+
+                285%
               </div>
-              <div className="text-gray-600">Industries Served</div>
+              <div className="text-gray-600">Avg Revenue Growth</div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-purple-600 mb-2 stat-number">
-                98%
+                7
               </div>
-              <div className="text-gray-600">Retention Rate</div>
+              <div className="text-gray-600">Day Launch</div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-orange-600 mb-2 stat-number">
-                5
+                100%
               </div>
-              <div className="text-gray-600">Years Experience</div>
+              <div className="text-gray-600">ROI Guarantee</div>
             </div>
           </div>
         </div>

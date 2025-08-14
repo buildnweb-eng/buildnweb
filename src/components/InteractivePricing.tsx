@@ -38,23 +38,23 @@ const InteractivePricing = () => {
   const [estimatedROI, setEstimatedROI] = useState(0);
 
   const websiteTypes = useMemo(() => ({
-    basic: { name: "Business Website", basePrice: 25000, multiplier: 1 },
-    ecommerce: { name: "E-commerce Store", basePrice: 45000, multiplier: 1.5 },
+    basic: { name: "SaaS Landing Page", basePrice: 50000, multiplier: 1 },
+    ecommerce: { name: "E-commerce Revenue Engine", basePrice: 150000, multiplier: 1.5 },
     enterprise: {
-      name: "Enterprise Solution",
-      basePrice: 85000,
+      name: "Enterprise SaaS Platform",
+      basePrice: 300000,
       multiplier: 2.2,
     },
   }), []);
 
   const addOns = useMemo(() => ({
-    ecommerce: { price: 15000, roi: 300 },
-    seo: { price: 8000, roi: 250 },
-    socialMedia: { price: 5000, roi: 180 },
-    paidAds: { price: 10000, roi: 340 },
-    analytics: { price: 3000, roi: 120 },
-    maintenance: { price: 4000, roi: 150 },
-    priority: { price: 12000, roi: 200 },
+    ecommerce: { price: 50000, roi: 300 },
+    seo: { price: 25000, roi: 250 },
+    socialMedia: { price: 15000, roi: 180 },
+    paidAds: { price: 30000, roi: 340 },
+    analytics: { price: 20000, roi: 120 },
+    maintenance: { price: 15000, roi: 150 },
+    priority: { price: 25000, roi: 200 },
   }), []);
 
   useEffect(() => {
@@ -66,7 +66,7 @@ const InteractivePricing = () => {
     // Add page costs
     const pageCount = config.pages[0];
     if (pageCount > 5) {
-      totalPrice += (pageCount - 5) * 2000;
+      totalPrice += (pageCount - 5) * 5000;
     }
 
     // Add-on pricing
@@ -87,17 +87,17 @@ const InteractivePricing = () => {
 
   const getFeatureList = () => {
     const features = [
-      "Professional Design",
-      "Mobile Responsive",
-      "SSL Certificate",
-      "Basic SEO Setup",
+      "Conversion-Optimized Design",
+      "Demo Booking Forms",
+      "A/B Testing Setup",
+      "Analytics Tracking",
     ];
 
     if (config.ecommerce)
-      features.push("Payment Gateway", "Inventory Management");
-    if (config.seo) features.push("Advanced SEO", "Google My Business Setup");
+      features.push("Payment Integration", "Revenue Tracking");
+    if (config.seo) features.push("SaaS SEO Strategy", "Lead Generation SEO");
     if (config.socialMedia)
-      features.push("Social Media Integration", "Content Calendar");
+      features.push("LinkedIn Integration", "SaaS Content Strategy");
     if (config.paidAds)
       features.push("Google Ads Setup", "Facebook Ads Management");
     if (config.analytics)

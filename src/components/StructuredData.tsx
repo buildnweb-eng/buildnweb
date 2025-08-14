@@ -3,12 +3,12 @@ import Script from "next/script";
 const StructuredData = () => {
   const organizationSchema = {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "Buildnweb",
-    url: "https://Buildnweb",
-    logo: "https://Buildnweb/logo.png",
+    "@type": "ProfessionalService",
+    name: "BuildnWeb",
+    url: "https://buildnweb.in",
+    logo: "https://buildnweb.in/logo.png",
     description:
-      "Professional web development agency specializing in web applications, Android apps, desktop applications, and college projects.",
+      "ROI-driven development agency that launches high-converting websites in 7 days for SaaS, e-commerce, and service businesses.",
     address: {
       "@type": "PostalAddress",
       addressCountry: "IN",
@@ -17,10 +17,11 @@ const StructuredData = () => {
     contactPoint: {
       "@type": "ContactPoint",
       telephone: "+91-98765-43210",
-      contactType: "customer service",
-      email: "buildnweb@gmail.com",
-      availableLanguage: ["English", "Hindi"],
+      contactType: "sales",
+      email: "hello@buildnweb.in",
+      availableLanguage: ["English"],
     },
+    priceRange: "₹₹₹",
     sameAs: [
       "https://twitter.com/Buildnwebagency",
       "https://facebook.com/Buildnwebagency",
@@ -32,13 +33,13 @@ const StructuredData = () => {
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "Buildnweb",
-    url: "https://Buildnweb",
+    name: "BuildnWeb - ROI-Driven Development Agency",
+    url: "https://buildnweb.in",
     potentialAction: {
       "@type": "SearchAction",
       target: {
         "@type": "EntryPoint",
-        urlTemplate: "https://Buildnweb/search?q={search_term_string}",
+        urlTemplate: "https://buildnweb.in/search?q={search_term_string}",
       },
       "query-input": "required name=search_term_string",
     },
@@ -49,8 +50,8 @@ const StructuredData = () => {
     "@type": "Service",
     serviceType: "Software Development",
     provider: {
-      "@type": "Organization",
-      name: "Buildnweb",
+      "@type": "ProfessionalService",
+      name: "BuildnWeb",
     },
     areaServed: {
       "@type": "Country",
@@ -64,34 +65,32 @@ const StructuredData = () => {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Web Application Development",
+            name: "7-Day SaaS Website Launch",
             description:
-              "Full-stack web applications with React, Next.js, Node.js",
+              "High-converting SaaS website with demo booking optimization. Guaranteed 7-day delivery.",
           },
+          price: "75000",
+          priceCurrency: "INR",
         },
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Android App Development",
-            description: "Native and cross-platform mobile apps",
+            name: "E-commerce Conversion Engine",
+            description: "Revenue-optimized e-commerce site with AOV and conversion rate improvements.",
           },
+          price: "200000",
+          priceCurrency: "INR",
         },
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Desktop Application Development",
-            description: "Cross-platform desktop software solutions",
+            name: "Service Business Lead Generator",
+            description: "Lead generation website that drives qualified inbound calls and form submissions.",
           },
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "College Project Assistance",
-            description: "Academic project development and guidance",
-          },
+          price: "50000",
+          priceCurrency: "INR",
         },
       ],
     },
@@ -105,25 +104,25 @@ const StructuredData = () => {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://Buildnweb",
+        item: "https://buildnweb.in",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Services",
-        item: "https://Buildnweb/#services",
+        item: "https://buildnweb.in/#services",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: "Portfolio",
-        item: "https://Buildnweb/#portfolio",
+        item: "https://buildnweb.in/#portfolio",
       },
       {
         "@type": "ListItem",
         position: 4,
         name: "Contact",
-        item: "https://Buildnweb/#contact",
+        item: "https://buildnweb.in/#contact",
       },
     ],
   };

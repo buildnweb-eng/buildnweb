@@ -63,18 +63,18 @@ const Contact = () => {
         <div className="text-center mb-16">
           <div className="mb-4">
             <span className="inline-flex items-center bg-gradient-to-r from-pink-600 to-orange-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-              <SparklesIcon className="h-4 w-4 mr-2" />
-              Get In Touch
+              <ClockIcon className="h-4 w-4 mr-2" />
+              Free 30-Min Strategy Session
             </span>
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Let&apos;s Create Something
+            Book Your Free
             <br />
-            <span className="gradient-text">Amazing Together</span>
+            <span className="gradient-text">Strategy Call</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Ready to bring your ideas to life? Let&apos;s discuss your project
-            and explore how we can help you achieve your goals.
+            Ready to grow your revenue? Let's discuss your SaaS goals and create
+            a conversion-optimized website that drives real results.
           </p>
         </div>
 
@@ -88,10 +88,10 @@ const Contact = () => {
                   <PhoneIcon className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900">
-                  Call Us
+                  Strategy Call
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Ready to discuss your project?
+                  30-min revenue growth consultation
                 </p>
                 <a
                   href="tel:+916281432326"
@@ -114,13 +114,13 @@ const Contact = () => {
                   Email Us
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Send us your project details
+                  Send us your SaaS details
                 </p>
                 <a
-                  href="mailto:buildnweb@gmail.com"
+                  href="mailto:hello@buildnweb.in"
                   className="text-purple-600 font-semibold hover:text-purple-700"
                 >
-                  buildnweb@gmail.com
+                  hello@buildnweb.in
                 </a>
               </div>
             </div>
@@ -134,11 +134,11 @@ const Contact = () => {
                   <ChatBubbleLeftRightIcon className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900">
-                  Live Chat
+                  Quick Audit
                 </h3>
-                <p className="text-gray-600 mb-4">Get instant answers</p>
+                <p className="text-gray-600 mb-4">Free 10-min website audit</p>
                 <span className="text-green-600 font-semibold">
-                  Available 24/7
+                  Instant Results
                 </span>
               </div>
             </div>
@@ -149,17 +149,17 @@ const Contact = () => {
           <div className="space-y-8">
             <div className="bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 rounded-3xl p-8">
               <h3 className="text-2xl font-bold mb-6 text-gray-900">
-                Why Choose Buildnweb?
+                Why Choose BuildnWeb?
               </h3>
               <div className="grid sm:grid-cols-2 gap-4">
                 <div className="flex items-start space-x-3">
                   <CheckIcon className="h-6 w-6 text-green-500 flex-shrink-0 mt-1" />
                   <div>
                     <h4 className="font-semibold text-gray-900">
-                      Free Consultation
+                      ROI Guarantee
                     </h4>
                     <p className="text-gray-600 text-sm">
-                      Discuss your ideas at no cost
+                      Measurable results or money back
                     </p>
                   </div>
                 </div>
@@ -167,10 +167,10 @@ const Contact = () => {
                   <CheckIcon className="h-6 w-6 text-green-500 flex-shrink-0 mt-1" />
                   <div>
                     <h4 className="font-semibold text-gray-900">
-                      Custom Solutions
+                      SaaS Specialists
                     </h4>
                     <p className="text-gray-600 text-sm">
-                      Tailored to your needs
+                      Demo booking optimization experts
                     </p>
                   </div>
                 </div>
@@ -178,10 +178,10 @@ const Contact = () => {
                   <ClockIcon className="h-6 w-6 text-green-500 flex-shrink-0 mt-1" />
                   <div>
                     <h4 className="font-semibold text-gray-900">
-                      Fast Delivery
+                      7-Day Launch
                     </h4>
                     <p className="text-gray-600 text-sm">
-                      Quick turnaround times
+                      Guaranteed delivery timeline
                     </p>
                   </div>
                 </div>
@@ -189,9 +189,9 @@ const Contact = () => {
                   <CheckIcon className="h-6 w-6 text-green-500 flex-shrink-0 mt-1" />
                   <div>
                     <h4 className="font-semibold text-gray-900">
-                      24/7 Support
+                      Revenue Focus
                     </h4>
-                    <p className="text-gray-600 text-sm">Always here to help</p>
+                    <p className="text-gray-600 text-sm">Built for business growth</p>
                   </div>
                 </div>
               </div>
@@ -222,8 +222,17 @@ const Contact = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl blur opacity-20"></div>
             <div className="relative bg-white rounded-2xl p-8 shadow-modern">
               <h3 className="text-2xl font-bold mb-6 text-gray-900">
-                Start Your Project
+                Book Your Strategy Call
               </h3>
+              <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 mb-6">
+                <div className="flex items-center space-x-3">
+                  <ClockIcon className="h-5 w-5 text-blue-600" />
+                  <div>
+                    <p className="font-semibold text-blue-900">Free 30-Minute Consultation</p>
+                    <p className="text-sm text-blue-700">Discuss your SaaS goals and get a custom growth plan</p>
+                  </div>
+                </div>
+              </div>
               <FormProgressBar
                 currentStep={formStep}
                 totalSteps={totalSteps}
@@ -294,12 +303,11 @@ const Contact = () => {
                     onFocus={() => setFormStep(4)}
                   >
                     <option value="">Select a service</option>
-                    <option>Web Application Development</option>
-                    <option>Android App Development</option>
-                    <option>Desktop Application</option>
-                    <option>College Project Help</option>
-                    <option>Complete Package</option>
-                    <option>Other</option>
+                    <option>7-Day SaaS Website Launch</option>
+                    <option>E-commerce Revenue Engine</option>
+                    <option>Service Business Lead Generator</option>
+                    <option>Complete Growth Package</option>
+                    <option>Custom Solution</option>
                   </select>
                 </div>
 
@@ -309,10 +317,10 @@ const Contact = () => {
                   </label>
                   <select className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all duration-300">
                     <option value="">Select budget range</option>
-                    <option>Under $1,000</option>
-                    <option>$1,000 - $5,000</option>
-                    <option>$5,000 - $10,000</option>
-                    <option>$10,000+</option>
+                    <option>₹25,000 - ₹50,000</option>
+                    <option>₹50,000 - ₹1,00,000</option>
+                    <option>₹1,00,000 - ₹2,00,000</option>
+                    <option>₹2,00,000+</option>
                     <option>Let&apos;s discuss</option>
                   </select>
                 </div>
@@ -324,7 +332,7 @@ const Contact = () => {
                   <textarea
                     rows={4}
                     className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all duration-300"
-                    placeholder="Tell us about your project, requirements, timeline, and any specific features you need..."
+                    placeholder="Tell us about your SaaS: current conversion rates, demo booking challenges, growth goals, and target launch date..."
                     required
                     onFocus={() => setFormStep(5)}
                   ></textarea>
@@ -361,7 +369,7 @@ const Contact = () => {
                     </>
                   ) : (
                     <>
-                      <span>Send Message</span>
+                      <span>Book Strategy Call</span>
                       <PaperAirplaneIcon className="h-5 w-5" />
                     </>
                   )}

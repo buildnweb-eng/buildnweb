@@ -26,88 +26,55 @@ const Portfolio = () => {
 
   const portfolio = [
     {
-      title: "E-commerce Dashboard",
-      category: "Web Application",
-      type: "web",
-      tech: ["React", "Node.js", "MongoDB", "Stripe"],
+      title: "CloudSync SaaS Platform",
+      category: "SaaS Website",
+      type: "saas",
+      tech: ["Next.js", "Stripe", "Analytics", "A/B Testing"],
       description:
-        "Modern e-commerce platform with advanced analytics, inventory management, and seamless payment integration",
+        "Conversion-optimized SaaS website that increased demo bookings by 285% and reduced CAC by 40%",
       gradient: "from-blue-500 to-cyan-500",
       icon: <CodeBracketIcon className="h-6 w-6" />,
       image: "https://cdn.dribbble.com/userupload/10924024/file/original-313341b8afc54b7fd55a62e7c05b58b4.png?resize=2048x1536&vertical=center",
-      features: ["Real-time Analytics", "Payment Gateway", "Inventory Management", "Multi-vendor Support"],
+      features: ["3x Demo Bookings", "40% Lower CAC", "7-Day Launch", "A/B Tested Components"],
+      metrics: "+285% revenue growth",
     },
     {
-      title: "Task Management System",
-      category: "Web Application",
-      type: "web",
-      tech: ["React", "Node.js", "PostgreSQL", "Socket.io"],
+      title: "DataVault Enterprise",
+      category: "B2B SaaS",
+      type: "saas",
+      tech: ["React", "Lead Scoring", "CRM Integration", "Analytics"],
       description:
-        "Collaborative task management platform with real-time updates, team collaboration, and advanced project tracking",
+        "Enterprise SaaS website with advanced lead qualification that generated 5x qualified leads",
       gradient: "from-green-500 to-emerald-500",
       icon: <CodeBracketIcon className="h-6 w-6" />,
       image: "https://cdn.dribbble.com/userupload/16605258/file/original-36889bf7f1c4a8e4cff085e71ac8d408.png?resize=2048x1536&vertical=center",
-      features: ["Real-time Collaboration", "Project Tracking", "Team Management", "Deadline Alerts"],
+      features: ["5x Lead Quality", "Pipeline Optimization", "CRM Integration", "ROI Tracking"],
+      metrics: "+420% pipeline value",
     },
     {
-      title: "Inventory Management System",
-      category: "Desktop Application",
-      type: "desktop",
-      tech: ["Electron", "SQLite", "Chart.js", "Node.js"],
+      title: "TechFlow Analytics",
+      category: "SaaS Landing Page",
+      type: "saas",
+      tech: ["Next.js", "Conversion Tracking", "Heat Maps", "User Testing"],
       description:
-        "Comprehensive inventory management solution with advanced reporting, stock tracking, and supplier management",
+        "High-converting landing page for analytics SaaS that doubled conversion rates in 30 days",
       gradient: "from-purple-500 to-violet-500",
       icon: <ComputerDesktopIcon className="h-6 w-6" />,
       image: "https://cdn.dribbble.com/userupload/37420944/file/original-d2d2ad39ad2d7fba636f8c0c68204dd8.jpg?resize=1504x1128&vertical=center",
-      features: ["Stock Management", "Supplier Tracking", "Reports & Analytics", "Multi-location Support"],
-    },
-    {
-      title: "Student Management Portal",
-      category: "College Project",
-      type: "college",
-      tech: ["React", "Node.js", "MySQL", "JWT"],
-      description: "Complete student information system with grade management, attendance tracking, and parent portal",
-      gradient: "from-orange-500 to-red-500",
-      icon: <AcademicCapIcon className="h-6 w-6" />,
-      image: "https://cdn.dribbble.com/userupload/35226367/file/original-bed5129538f3a55e0d1b1e4aaa279caa.png?resize=2048x1536&vertical=center",
-      features: ["Grade Management", "Attendance Tracking", "Parent Portal", "Course Scheduling"],
-    },
-    {
-      title: "Real Estate Platform",
-      category: "Web Application",
-      type: "web",
-      tech: ["Next.js", "Prisma", "PostgreSQL", "Mapbox"],
-      description: "Modern property listing platform with advanced search, virtual tours, and integrated map functionality",
-      gradient: "from-indigo-500 to-blue-500",
-      icon: <CodeBracketIcon className="h-6 w-6" />,
-      image: "https://cdn.dribbble.com/userupload/7890447/file/original-f9ec107e283b8b6ba963ce5a572b25d7.png?resize=2048x1536&vertical=center",
-      features: ["Property Listings", "Virtual Tours", "Map Integration", "Mortgage Calculator"],
-    },
-    {
-      title: "Fitness Tracker Mobile App",
-      category: "Android Application",
-      type: "mobile",
-      tech: ["React Native", "Firebase", "HealthKit", "Charts"],
-      description: "Comprehensive fitness and health tracking app with workout plans, nutrition tracking, and progress analytics",
-      gradient: "from-pink-500 to-rose-500",
-      icon: <DevicePhoneMobileIcon className="h-6 w-6" />,
-      image: "https://cdn.dribbble.com/userupload/44055925/file/original-e207e27cedcc38cc81a10876ca628bd4.png?resize=2048x1536&vertical=center",
-      features: ["Workout Tracking", "Nutrition Monitoring", "Progress Analytics", "Social Challenges"],
+      features: ["2x Conversion Rate", "Heat Map Analysis", "User Journey Optimization", "Mobile-First Design"],
+      metrics: "+180% ARR growth",
     },
   ];
 
   const filters = [
     "All",
-    "Web Application",
-    "Android Application",
-    "Desktop Application",
-    "College Project",
+    "SaaS",
   ];
 
   const filteredPortfolio =
     activeFilter === "All"
       ? portfolio
-      : portfolio.filter((project) => project.category === activeFilter);
+      : portfolio.filter((project) => project.type === activeFilter.toLowerCase());
 
   useEffect(() => {
     // Simulate data loading
@@ -182,30 +149,30 @@ const Portfolio = () => {
           <div className="mb-6">
             <span className="inline-flex items-center bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white px-6 py-3 rounded-full text-sm font-semibold shadow-lg">
               <SparklesIcon className="h-5 w-5 mr-2" />
-              Our Portfolio
+              SaaS Case Studies
             </span>
           </div>
           <h2 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
-            Showcasing Our
+            SaaS Success
             <br />
             <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-              Digital Masterpieces
+              Case Studies
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Discover our carefully crafted solutions spanning web applications, mobile experiences, 
-            desktop software, and innovative college projects that drive real results
+            Real SaaS companies, real revenue growth. See how our conversion-optimized 
+            websites drive measurable business results in just 7 days.
           </p>
           
           {/* Stats */}
           <div className="flex items-center justify-center space-x-8 mt-8 text-sm text-gray-500">
             <div className="flex items-center space-x-2">
               <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-              <span>20+ Projects Delivered</span>
+              <span>3x Average Demo Bookings</span>
             </div>
             <div className="flex items-center space-x-2">
               <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-              <span>100% Client Satisfaction</span>
+              <span>7-Day Launch Guarantee</span>
             </div>
           </div>
         </div>
@@ -288,6 +255,16 @@ const Portfolio = () => {
                       <p className="text-gray-600 mb-4 leading-relaxed flex-1">
                         {project.description}
                       </p>
+                      
+                      {/* Metrics Badge */}
+                      {project.metrics && (
+                        <div className="mb-4">
+                          <div className="inline-flex items-center bg-green-50 border border-green-200 px-3 py-1.5 rounded-full">
+                            <div className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></div>
+                            <span className="text-green-700 font-semibold text-sm">{project.metrics}</span>
+                          </div>
+                        </div>
+                      )}
 
                       {/* Features list */}
                       <div className="mb-4">
@@ -318,10 +295,10 @@ const Portfolio = () => {
                         <div className="flex items-center justify-between">
                           <div className="flex items-center space-x-2 text-sm text-gray-500">
                             <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                            <span>Live Project</span>
+                            <span>Revenue Growth</span>
                           </div>
                           <button className="text-blue-600 hover:text-blue-700 text-sm font-semibold flex items-center space-x-1 group/btn">
-                            <span>View Details</span>
+                            <span>View Case Study</span>
                             <ArrowTopRightOnSquareIcon className="h-4 w-4 transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
                           </button>
                         </div>

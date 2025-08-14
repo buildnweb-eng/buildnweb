@@ -19,6 +19,23 @@ const Hero = () => {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
+      // Check for reduced motion preference
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      
+      if (prefersReducedMotion) {
+        // Simple fade-in without complex animations
+        gsap.set(
+          [
+            heroTextRef.current,
+            heroSubtextRef.current,
+            heroButtonsRef.current,
+            heroStatsRef.current,
+            heroGraphicRef.current,
+          ],
+          { opacity: 1, y: 0, x: 0, rotation: 0 }
+        );
+        return;
+      }
       // Set initial states
       gsap.set(
         [
@@ -165,30 +182,29 @@ const Hero = () => {
             <div ref={heroTextRef}>
               <div className="mb-4">
                 <span className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
-                  🚀 Profit-Generating Digital Systems
+                  🚀 SaaS Revenue Acceleration
                 </span>
               </div>
               <h1 className="text-5xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
-                We Don&apos;t Just Build
+                Launch High-Converting
                 <br />
-                <span className="gradient-text">Websites</span>—We Engineer
+                <span className="gradient-text">SaaS Websites</span> in
                 <br />
-                <span className="text-blue-600">Profit Machines</span>
+                <span className="text-blue-600">7 Days</span>
               </h1>
             </div>
             <div ref={heroSubtextRef}>
               <p className="text-xl text-gray-600 mb-6 leading-relaxed max-w-2xl">
-                <strong>Average client sees 340% ROI in first 90 days.</strong>
-                We engineer profit-generating systems that work 24/7, turning
-                your digital presence into a revenue powerhouse.
+                We engineer revenue-driving websites for SaaS companies that convert visitors into demo bookings.
+                <strong>Guaranteed launch in 7 days</strong> with measurable ROI or your money back.
               </p>
               <div className="bg-gradient-to-r from-green-50 to-blue-50 border-l-4 border-green-500 p-4 rounded-r-lg mb-6">
                 <p className="text-lg font-semibold text-gray-800 mb-2">
-                  The Business Impact We Deliver
+                  Proven SaaS Growth Results
                 </p>
                 <p className="text-gray-700">
-                  Real numbers from real businesses. This is what happens when
-                  you work with 50 years of digital mastery.
+                  Our SaaS clients see 3x more demo bookings within 30 days.
+                  Revenue-focused design that converts.
                 </p>
               </div>
             </div>
@@ -200,13 +216,13 @@ const Hero = () => {
                 href="#contact"
                 className="btn-primary text-center animated-btn"
               >
-                Start Your 7-Day Project
+                Book Your Strategy Call
               </a>
               <a
                 href="#services"
                 className="btn-secondary text-center animated-btn"
               >
-                See Our ROI Results
+                See Case Studies
               </a>
             </div>
             <div
@@ -215,9 +231,9 @@ const Hero = () => {
             >
               <div className="text-center bg-white/80 backdrop-blur-sm rounded-xl p-4 shadow-lg">
                 <div className="text-2xl font-bold text-blue-600 stat-number">
-                  340
+                  3
                 </div>
-                <div className="text-gray-600 text-sm">% Average ROI</div>
+                <div className="text-gray-600 text-sm">x Demo Bookings</div>
               </div>
               <div className="text-center bg-white/80 backdrop-blur-sm rounded-xl p-4 shadow-lg">
                 <div className="text-2xl font-bold text-purple-600 stat-number">
@@ -227,13 +243,13 @@ const Hero = () => {
               </div>
               <div className="text-center bg-white/80 backdrop-blur-sm rounded-xl p-4 shadow-lg">
                 <div className="text-2xl font-bold text-green-600 stat-number">
-                  50
+                  30
                 </div>
-                <div className="text-gray-600 text-sm">Years Experience</div>
+                <div className="text-gray-600 text-sm">Day ROI</div>
               </div>
               <div className="text-center bg-white/80 backdrop-blur-sm rounded-xl p-4 shadow-lg">
-                <div className="text-2xl font-bold text-orange-600">24/7</div>
-                <div className="text-gray-600 text-sm">Profit Systems</div>
+                <div className="text-2xl font-bold text-orange-600">100%</div>
+                <div className="text-gray-600 text-sm">Guarantee</div>
               </div>
             </div>
           </div>

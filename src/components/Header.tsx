@@ -32,7 +32,7 @@ const Header = () => {
                   <span className="text-white font-bold text-lg">TC</span>
                 </div>
                 <div className="text-2xl font-bold gradient-text">
-                  Buildnweb
+                  BuildnWeb
                 </div>
               </div>
             </div>
@@ -103,7 +103,7 @@ const Header = () => {
                 href="#contact"
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2.5 rounded-xl font-semibold transition-all duration-300 hover:shadow-lg hover:scale-105 animated-btn"
               >
-                Get Started
+                Book Strategy Call
               </a>
             </div>
 

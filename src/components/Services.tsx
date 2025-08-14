@@ -25,55 +25,42 @@ const Services = () => {
   const services = [
     {
       icon: <CodeBracketIcon className="h-12 w-12 text-blue-600" />,
-      title: "Web Applications",
+      title: "SaaS Website Launch",
       description:
-        "Full-stack web applications built with cutting-edge technologies like React, Next.js, Node.js, and modern databases.",
+        "High-converting SaaS websites with demo booking optimization. Guaranteed 7-day delivery with measurable ROI.",
       features: [
-        "Custom Web Apps",
-        "E-commerce Platforms",
-        "Admin Dashboards",
-        "API Development",
+        "Demo booking optimization",
+        "Conversion tracking setup",
+        "A/B tested components",
+        "Analytics dashboard",
       ],
       gradient: "from-blue-500 to-cyan-500",
     },
     {
       icon: <DevicePhoneMobileIcon className="h-12 w-12 text-green-600" />,
-      title: "Android Applications",
+      title: "E-commerce Revenue Engine",
       description:
-        "Native and cross-platform mobile apps for Android with intuitive UI/UX and robust functionality.",
+        "Revenue-optimized e-commerce sites with AOV and conversion rate improvements. Built for scalable growth.",
       features: [
-        "Native Android",
-        "React Native",
-        "Flutter Development",
-        "App Store Deployment",
+        "Cart abandonment recovery",
+        "Product recommendations",
+        "One-click checkout",
+        "Revenue analytics",
       ],
       gradient: "from-green-500 to-emerald-500",
     },
     {
       icon: <ComputerDesktopIcon className="h-12 w-12 text-purple-600" />,
-      title: "Desktop Applications",
+      title: "Service Business Lead Generator",
       description:
-        "Cross-platform desktop software solutions using Electron, .NET, Java, and other robust frameworks.",
+        "Lead generation websites that drive qualified inbound calls and form submissions for service businesses.",
       features: [
-        "Cross-Platform Apps",
-        "Windows Applications",
-        "macOS Applications",
-        "System Integration",
+        "Contact form optimization",
+        "Local SEO setup",
+        "Call tracking integration",
+        "Appointment booking",
       ],
       gradient: "from-purple-500 to-violet-500",
-    },
-    {
-      icon: <AcademicCapIcon className="h-12 w-12 text-orange-600" />,
-      title: "College Projects",
-      description:
-        "Academic project development and guidance for students with complete documentation and presentation support.",
-      features: [
-        "Final Year Projects",
-        "Mini Projects",
-        "Research Papers",
-        "Technical Documentation",
-      ],
-      gradient: "from-orange-500 to-red-500",
     },
   ];
 
@@ -84,6 +71,15 @@ const Services = () => {
     }, 1000);
 
     if (typeof window !== "undefined" && servicesRef.current && !isLoading) {
+      // Check for reduced motion preference
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      
+      if (prefersReducedMotion) {
+        // Simple appearance without animations
+        gsap.set(Array.from(servicesRef.current.children), { opacity: 1, y: 0 });
+        gsap.set(".service-card", { scale: 1, y: 0 });
+        return;
+      }
       gsap.fromTo(
         Array.from(servicesRef.current.children),
         {
@@ -151,20 +147,19 @@ const Services = () => {
             </span>
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Transforming Ideas Into
+            Revenue-Driven
             <br />
-            <span className="gradient-text">Digital Reality</span>
+            <span className="gradient-text">Digital Solutions</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            From concept to deployment, we deliver comprehensive solutions
-            across all digital platforms
+            Specialized websites engineered for measurable business growth.
+            7-day launch guarantee with ROI focus.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="grid lg:grid-cols-3 gap-8">
           {isLoading ? (
             <>
-              <ServiceCardSkeleton />
               <ServiceCardSkeleton />
               <ServiceCardSkeleton />
               <ServiceCardSkeleton />
