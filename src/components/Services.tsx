@@ -24,7 +24,7 @@ const Services = () => {
 
   const services = [
     {
-      icon: <CodeBracketIcon className="h-12 w-12 text-blue-600" />,
+      icon: <CodeBracketIcon className="h-12 w-12 text-brand-primary" />,
       title: "SaaS Website Launch",
       description:
         "High-converting SaaS websites with demo booking optimization. Guaranteed 7-day delivery with measurable ROI.",
@@ -34,10 +34,10 @@ const Services = () => {
         "A/B tested components",
         "Analytics dashboard",
       ],
-      gradient: "from-blue-500 to-cyan-500",
+      gradient: "from-brand-primary to-brand-secondary",
     },
     {
-      icon: <DevicePhoneMobileIcon className="h-12 w-12 text-green-600" />,
+      icon: <DevicePhoneMobileIcon className="h-12 w-12 text-brand-accent" />,
       title: "E-commerce Revenue Engine",
       description:
         "Revenue-optimized e-commerce sites with AOV and conversion rate improvements. Built for scalable growth.",
@@ -47,10 +47,10 @@ const Services = () => {
         "One-click checkout",
         "Revenue analytics",
       ],
-      gradient: "from-green-500 to-emerald-500",
+      gradient: "from-brand-accent to-brand-primary",
     },
     {
-      icon: <ComputerDesktopIcon className="h-12 w-12 text-purple-600" />,
+      icon: <ComputerDesktopIcon className="h-12 w-12 text-brand-secondary" />,
       title: "Service Business Lead Generator",
       description:
         "Lead generation websites that drive qualified inbound calls and form submissions for service businesses.",
@@ -60,7 +60,7 @@ const Services = () => {
         "Call tracking integration",
         "Appointment booking",
       ],
-      gradient: "from-purple-500 to-violet-500",
+      gradient: "from-brand-secondary to-brand-primary",
     },
   ];
 
@@ -72,11 +72,16 @@ const Services = () => {
 
     if (typeof window !== "undefined" && servicesRef.current && !isLoading) {
       // Check for reduced motion preference
-      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      
+      const prefersReducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
+
       if (prefersReducedMotion) {
         // Simple appearance without animations
-        gsap.set(Array.from(servicesRef.current.children), { opacity: 1, y: 0 });
+        gsap.set(Array.from(servicesRef.current.children), {
+          opacity: 1,
+          y: 0,
+        });
         gsap.set(".service-card", { scale: 1, y: 0 });
         return;
       }
@@ -141,7 +146,7 @@ const Services = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <div className="mb-4">
-            <span className="inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+            <span className="inline-flex items-center bg-gradient-to-r from-brand-primary to-brand-secondary text-white px-4 py-2 rounded-full text-sm font-semibold">
               <SparklesIcon className="h-4 w-4 mr-2" />
               Our Expertise
             </span>
@@ -166,51 +171,51 @@ const Services = () => {
             </>
           ) : (
             services.map((service, index) => (
-            <div key={index} className="group service-card cursor-pointer">
-              <div
-                className={`relative bg-gradient-to-br ${service.gradient} p-1 rounded-2xl`}
-              >
-                <div className="bg-white rounded-2xl p-8 h-full">
-                  <div className="flex items-start space-x-6">
-                    <div className="flex-shrink-0">
-                      <div
-                        className={`p-3 rounded-xl bg-gradient-to-br ${service.gradient}`}
-                      >
-                        <div className="text-white">
-                          {React.cloneElement(service.icon, {
-                            className: "h-8 w-8 text-white",
-                          })}
+              <div key={index} className="group service-card cursor-pointer">
+                <div
+                  className={`relative bg-gradient-to-br ${service.gradient} p-1 rounded-2xl`}
+                >
+                  <div className="bg-white rounded-2xl p-8 h-full">
+                    <div className="flex items-start space-x-6">
+                      <div className="flex-shrink-0">
+                        <div
+                          className={`p-3 rounded-xl bg-gradient-to-br ${service.gradient}`}
+                        >
+                          <div className="text-white">
+                            {React.cloneElement(service.icon, {
+                              className: "h-8 w-8 text-white",
+                            })}
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-2xl font-bold mb-3 text-gray-900">
+                          {service.title}
+                        </h3>
+                        <p className="text-gray-600 mb-6 leading-relaxed">
+                          {service.description}
+                        </p>
+                        <div className="grid grid-cols-2 gap-2">
+                          {service.features.map((feature, i) => (
+                            <div
+                              key={i}
+                              className="flex items-center space-x-2 text-sm"
+                            >
+                              <CheckIcon className="h-4 w-4 text-green-500 flex-shrink-0" />
+                              <span className="text-gray-700 font-medium">
+                                {feature}
+                              </span>
+                            </div>
+                          ))}
                         </div>
                       </div>
                     </div>
-                    <div className="flex-1">
-                      <h3 className="text-2xl font-bold mb-3 text-gray-900">
-                        {service.title}
-                      </h3>
-                      <p className="text-gray-600 mb-6 leading-relaxed">
-                        {service.description}
-                      </p>
-                      <div className="grid grid-cols-2 gap-2">
-                        {service.features.map((feature, i) => (
-                          <div
-                            key={i}
-                            className="flex items-center space-x-2 text-sm"
-                          >
-                            <CheckIcon className="h-4 w-4 text-green-500 flex-shrink-0" />
-                            <span className="text-gray-700 font-medium">
-                              {feature}
-                            </span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
 
-                  {/* Hover effect overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    {/* Hover effect overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
                 </div>
               </div>
-            </div>
             ))
           )}
         </div>

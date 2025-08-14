@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
 
 * {
   margin: 0;
@@ -15,7 +15,7 @@ html {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   background: #ffffff;
   color: #1a1a1a;
   line-height: 1.6;
@@ -31,12 +31,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #3b82f6;
+  background: theme('colors.brand.primary');
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #2563eb;
+  background: theme('colors.brand.primary-dark');
 }
 
 /* Animations */
@@ -80,19 +80,30 @@ body {
 }
 
 .animate-shimmer {
-  background: linear-gradient(
-    90deg,
-    #f0f0f0 25%,
-    #e0e0e0 50%,
-    #f0f0f0 75%
-  );
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
 }
 
 /* Gradient text */
 .gradient-text {
-  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  background: linear-gradient(135deg, theme('colors.brand.primary') 0%, theme('colors.brand.secondary') 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Revenue-focused gradient text */
+.gradient-text-revenue {
+  background: linear-gradient(135deg, theme('colors.brand.accent') 0%, theme('colors.brand.success') 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Trust-focused gradient text */
+.gradient-text-trust {
+  background: linear-gradient(135deg, theme('colors.brand.primary') 0%, theme('colors.brand.info') 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -100,11 +111,11 @@ body {
 
 /* Button hover effects */
 .btn-primary {
-  @apply bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 hover:shadow-lg hover:scale-105 transform;
+  @apply bg-brand-primary text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 hover:bg-brand-primary/90 hover:shadow-lg hover:scale-105 transform;
 }
 
 .btn-secondary {
-  @apply bg-transparent border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-xl font-semibold transition-all duration-300 hover:bg-blue-600 hover:text-white hover:shadow-lg transform hover:scale-105;
+  @apply bg-transparent border-2 border-brand-secondary text-brand-secondary px-8 py-3 rounded-xl font-semibold transition-all duration-300 hover:bg-brand-secondary hover:text-white hover:shadow-lg transform hover:scale-105;
 }
 
 /* Card styles */
@@ -113,20 +124,24 @@ body {
 }
 
 /* Modern gradient backgrounds */
-.gradient-bg-1 {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+.gradient-bg-primary {
+  background: linear-gradient(135deg, theme('colors.brand.primary') 0%, theme('colors.brand.secondary') 100%);
 }
 
-.gradient-bg-2 {
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+.gradient-bg-revenue {
+  background: linear-gradient(135deg, theme('colors.brand.accent') 0%, theme('colors.brand.success') 100%);
 }
 
-.gradient-bg-3 {
-  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+.gradient-bg-trust {
+  background: linear-gradient(135deg, theme('colors.brand.primary') 0%, theme('colors.brand.info') 100%);
 }
 
-.gradient-bg-4 {
-  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+.gradient-bg-conversion {
+  background: linear-gradient(135deg, theme('colors.brand.accent') 0%, theme('colors.brand.primary') 100%);
+}
+
+.gradient-bg-warning {
+  background: linear-gradient(135deg, theme('colors.brand.warning') 0%, theme('colors.brand.danger') 100%);
 }
 
 /* Glass morphism effect */
@@ -142,21 +157,35 @@ body {
 }
 
 .shadow-colored {
-  box-shadow: 0 25px 50px -12px rgba(59, 130, 246, 0.25);
+  box-shadow: 0 25px 50px -12px rgba(30, 64, 175, 0.25);
+}
+
+.shadow-revenue {
+  box-shadow: 0 25px 50px -12px rgba(16, 185, 129, 0.25);
+}
+
+.shadow-secondary {
+  box-shadow: 0 25px 50px -12px rgba(99, 102, 241, 0.25);
 }
 
 /* Animated border */
 .animated-border {
   position: relative;
-  background: linear-gradient(45deg, #3b82f6, #8b5cf6, #ec4899, #f59e0b);
+  background: linear-gradient(45deg, theme('colors.brand.primary'), theme('colors.brand.secondary'), theme('colors.brand.accent'), theme('colors.brand.warning'));
   background-size: 400% 400%;
   animation: gradient-shift 3s ease infinite;
 }
 
 @keyframes gradient-shift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* Pulse animation */
@@ -186,19 +215,44 @@ body {
 
 /* Creative backgrounds */
 .bg-pattern {
-  background-image: 
-    radial-gradient(circle at 25px 25px, rgba(59, 130, 246, 0.1) 2px, transparent 0),
-    radial-gradient(circle at 75px 75px, rgba(139, 92, 246, 0.1) 2px, transparent 0);
+  background-image: radial-gradient(
+      circle at 25px 25px,
+      rgba(30, 64, 175, 0.1) 2px,
+      transparent 0
+    ),
+    radial-gradient(
+      circle at 75px 75px,
+      rgba(99, 102, 241, 0.1) 2px,
+      transparent 0
+    );
   background-size: 100px 100px;
 }
 
 .bg-mesh {
   background-color: #ffffff;
-  background-image: 
-    linear-gradient(45deg, rgba(59, 130, 246, 0.1) 25%, transparent 25%),
-    linear-gradient(-45deg, rgba(59, 130, 246, 0.1) 25%, transparent 25%),
-    linear-gradient(45deg, transparent 75%, rgba(139, 92, 246, 0.1) 75%),
-    linear-gradient(-45deg, transparent 75%, rgba(139, 92, 246, 0.1) 75%);
+  background-image: linear-gradient(
+      45deg,
+      rgba(30, 64, 175, 0.1) 25%,
+      transparent 25%
+    ),
+    linear-gradient(-45deg, rgba(30, 64, 175, 0.1) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(99, 102, 241, 0.1) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(99, 102, 241, 0.1) 75%);
   background-size: 60px 60px;
   background-position: 0 0, 0 30px, 30px -30px, -30px 0px;
+}
+
+/* Revenue-focused patterns */
+.bg-revenue-pattern {
+  background-image: radial-gradient(
+      circle at 25px 25px,
+      rgba(16, 185, 129, 0.1) 2px,
+      transparent 0
+    ),
+    radial-gradient(
+      circle at 75px 75px,
+      rgba(5, 150, 105, 0.1) 2px,
+      transparent 0
+    );
+  background-size: 100px 100px;
 }

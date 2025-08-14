@@ -20,8 +20,10 @@ const Hero = () => {
   useEffect(() => {
     if (typeof window !== "undefined") {
       // Check for reduced motion preference
-      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      
+      const prefersReducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
+
       if (prefersReducedMotion) {
         // Simple fade-in without complex animations
         gsap.set(
@@ -181,7 +183,7 @@ const Hero = () => {
           <div>
             <div ref={heroTextRef}>
               <div className="mb-4">
-                <span className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                <span className="inline-block bg-gradient-to-r from-brand-primary to-brand-secondary text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
                   🚀 SaaS Revenue Acceleration
                 </span>
               </div>
@@ -190,15 +192,17 @@ const Hero = () => {
                 <br />
                 <span className="gradient-text">SaaS Websites</span> in
                 <br />
-                <span className="text-blue-600">7 Days</span>
+                <span className="text-brand-primary">7 Days</span>
               </h1>
             </div>
             <div ref={heroSubtextRef}>
               <p className="text-xl text-gray-600 mb-6 leading-relaxed max-w-2xl">
-                We engineer revenue-driving websites for SaaS companies that convert visitors into demo bookings.
-                <strong>Guaranteed launch in 7 days</strong> with measurable ROI or your money back.
+                We engineer revenue-driving websites for SaaS companies that
+                convert visitors into demo bookings.
+                <strong>Guaranteed launch in 7 days</strong> with measurable ROI
+                or your money back.
               </p>
-              <div className="bg-gradient-to-r from-green-50 to-blue-50 border-l-4 border-green-500 p-4 rounded-r-lg mb-6">
+              <div className="bg-gradient-to-r from-green-50 to-blue-50 border-l-4 border-brand-accent p-4 rounded-r-lg mb-6">
                 <p className="text-lg font-semibold text-gray-800 mb-2">
                   Proven SaaS Growth Results
                 </p>
@@ -230,25 +234,27 @@ const Hero = () => {
               className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-6"
             >
               <div className="text-center bg-white/80 backdrop-blur-sm rounded-xl p-4 shadow-lg">
-                <div className="text-2xl font-bold text-blue-600 stat-number">
+                <div className="text-2xl font-bold text-brand-primary stat-number">
                   3
                 </div>
                 <div className="text-gray-600 text-sm">x Demo Bookings</div>
               </div>
               <div className="text-center bg-white/80 backdrop-blur-sm rounded-xl p-4 shadow-lg">
-                <div className="text-2xl font-bold text-purple-600 stat-number">
+                <div className="text-2xl font-bold text-brand-secondary stat-number">
                   7
                 </div>
                 <div className="text-gray-600 text-sm">Days Delivery</div>
               </div>
               <div className="text-center bg-white/80 backdrop-blur-sm rounded-xl p-4 shadow-lg">
-                <div className="text-2xl font-bold text-green-600 stat-number">
+                <div className="text-2xl font-bold text-brand-accent stat-number">
                   30
                 </div>
                 <div className="text-gray-600 text-sm">Day ROI</div>
               </div>
               <div className="text-center bg-white/80 backdrop-blur-sm rounded-xl p-4 shadow-lg">
-                <div className="text-2xl font-bold text-orange-600">100%</div>
+                <div className="text-2xl font-bold text-brand-warning">
+                  100%
+                </div>
                 <div className="text-gray-600 text-sm">Guarantee</div>
               </div>
             </div>

@@ -62,7 +62,7 @@ const Contact = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <div className="mb-4">
-            <span className="inline-flex items-center bg-gradient-to-r from-pink-600 to-orange-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+            <span className="inline-flex items-center bg-gradient-to-r from-brand-secondary to-brand-warning text-white px-4 py-2 rounded-full text-sm font-semibold">
               <ClockIcon className="h-4 w-4 mr-2" />
               Free 30-Min Strategy Session
             </span>
@@ -73,7 +73,7 @@ const Contact = () => {
             <span className="gradient-text">Strategy Call</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Ready to grow your revenue? Let's discuss your SaaS goals and create
+            Ready to grow your revenue? Let&apos;s discuss your SaaS goals and create
             a conversion-optimized website that drives real results.
           </p>
         </div>
@@ -82,9 +82,9 @@ const Contact = () => {
           {/* Contact Cards */}
           <div className="group hover-lift">
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-brand-primary to-brand-info rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
               <div className="relative bg-white rounded-2xl p-8 text-center shadow-modern">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-brand-primary to-brand-info rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <PhoneIcon className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900">
@@ -95,7 +95,7 @@ const Contact = () => {
                 </p>
                 <a
                   href="tel:+916281432326"
-                  className="text-blue-600 font-semibold hover:text-blue-700"
+                  className="text-brand-primary font-semibold hover:text-blue-700"
                 >
                   +91 98765 43210
                 </a>
@@ -105,9 +105,9 @@ const Contact = () => {
 
           <div className="group hover-lift">
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-brand-secondary to-brand-warning rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
               <div className="relative bg-white rounded-2xl p-8 text-center shadow-modern">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-brand-secondary to-brand-warning rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <EnvelopeIcon className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900">
@@ -118,7 +118,7 @@ const Contact = () => {
                 </p>
                 <a
                   href="mailto:hello@buildnweb.in"
-                  className="text-purple-600 font-semibold hover:text-purple-700"
+                  className="text-brand-secondary font-semibold hover:text-purple-700"
                 >
                   hello@buildnweb.in
                 </a>
@@ -128,16 +128,16 @@ const Contact = () => {
 
           <div className="group hover-lift">
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-brand-accent to-brand-success rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
               <div className="relative bg-white rounded-2xl p-8 text-center shadow-modern">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-brand-accent to-brand-success rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <ChatBubbleLeftRightIcon className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900">
                   Quick Audit
                 </h3>
                 <p className="text-gray-600 mb-4">Free 10-min website audit</p>
-                <span className="text-green-600 font-semibold">
+                <span className="text-brand-accent font-semibold">
                   Instant Results
                 </span>
               </div>
@@ -219,14 +219,14 @@ const Contact = () => {
           </div>
 
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl blur opacity-20"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-brand-primary to-brand-secondary rounded-2xl blur opacity-20"></div>
             <div className="relative bg-white rounded-2xl p-8 shadow-modern">
               <h3 className="text-2xl font-bold mb-6 text-gray-900">
                 Book Your Strategy Call
               </h3>
               <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 mb-6">
                 <div className="flex items-center space-x-3">
-                  <ClockIcon className="h-5 w-5 text-blue-600" />
+                  <ClockIcon className="h-5 w-5 text-brand-primary" />
                   <div>
                     <p className="font-semibold text-blue-900">Free 30-Minute Consultation</p>
                     <p className="text-sm text-blue-700">Discuss your SaaS goals and get a custom growth plan</p>
@@ -261,7 +261,7 @@ const Contact = () => {
                     </label>
                     <input
                       type="text"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all duration-300"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-300"
                       placeholder="Your full name"
                       required
                       onFocus={() => setFormStep(1)}
@@ -273,7 +273,7 @@ const Contact = () => {
                     </label>
                     <input
                       type="email"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all duration-300"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-300"
                       placeholder="your@email.com"
                       required
                       onFocus={() => setFormStep(2)}
@@ -287,7 +287,7 @@ const Contact = () => {
                   </label>
                   <input
                     type="tel"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all duration-300"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-300"
                     placeholder="+91 98765 43210"
                     onFocus={() => setFormStep(3)}
                   />
@@ -298,7 +298,7 @@ const Contact = () => {
                     Service Needed *
                   </label>
                   <select
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all duration-300"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-300"
                     required
                     onFocus={() => setFormStep(4)}
                   >
@@ -315,7 +315,7 @@ const Contact = () => {
                   <label className="block text-sm font-bold text-gray-700 mb-2">
                     Project Budget
                   </label>
-                  <select className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all duration-300">
+                  <select className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-300">
                     <option value="">Select budget range</option>
                     <option>₹25,000 - ₹50,000</option>
                     <option>₹50,000 - ₹1,00,000</option>
@@ -331,7 +331,7 @@ const Contact = () => {
                   </label>
                   <textarea
                     rows={4}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all duration-300"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-300"
                     placeholder="Tell us about your SaaS: current conversion rates, demo booking challenges, growth goals, and target launch date..."
                     required
                     onFocus={() => setFormStep(5)}
@@ -341,7 +341,7 @@ const Contact = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-bold transition-all duration-300 hover:shadow-lg hover:scale-105 transform animated-btn flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full bg-gradient-to-r from-brand-primary to-brand-secondary text-white px-8 py-4 rounded-xl font-bold transition-all duration-300 hover:shadow-lg hover:scale-105 transform animated-btn flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? (
                     <>

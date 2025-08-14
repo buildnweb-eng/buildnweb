@@ -32,7 +32,7 @@ const Portfolio = () => {
       tech: ["Next.js", "Stripe", "Analytics", "A/B Testing"],
       description:
         "Conversion-optimized SaaS website that increased demo bookings by 285% and reduced CAC by 40%",
-      gradient: "from-blue-500 to-cyan-500",
+      gradient: "from-brand-primary to-brand-info",
       icon: <CodeBracketIcon className="h-6 w-6" />,
       image: "https://cdn.dribbble.com/userupload/10924024/file/original-313341b8afc54b7fd55a62e7c05b58b4.png?resize=2048x1536&vertical=center",
       features: ["3x Demo Bookings", "40% Lower CAC", "7-Day Launch", "A/B Tested Components"],
@@ -147,7 +147,7 @@ const Portfolio = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <div className="mb-6">
-            <span className="inline-flex items-center bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white px-6 py-3 rounded-full text-sm font-semibold shadow-lg">
+            <span className="inline-flex items-center bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-warning text-white px-6 py-3 rounded-full text-sm font-semibold shadow-lg">
               <SparklesIcon className="h-5 w-5 mr-2" />
               SaaS Case Studies
             </span>
@@ -155,7 +155,7 @@ const Portfolio = () => {
           <h2 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
             SaaS Success
             <br />
-            <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-warning bg-clip-text text-transparent">
               Case Studies
             </span>
           </h2>
@@ -209,7 +209,7 @@ const Portfolio = () => {
               <div key={index} className="group portfolio-card">
                 <div className="relative overflow-hidden h-full">
                   {/* Glowing border effect */}
-                  <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-3xl blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+                  <div className="absolute -inset-0.5 bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-warning rounded-3xl blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
                   
                   <div className="relative bg-white rounded-3xl overflow-hidden shadow-2xl h-full flex flex-col transform group-hover:scale-[1.02] transition-all duration-500">
                     {/* Project Image */}
@@ -271,7 +271,7 @@ const Portfolio = () => {
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-1 text-sm">
                           {project.features.slice(0, 4).map((feature, featureIndex) => (
                             <div key={featureIndex} className="flex items-center text-gray-600">
-                              <div className="w-1.5 h-1.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mr-2 flex-shrink-0"></div>
+                              <div className="w-1.5 h-1.5 bg-gradient-to-r from-brand-primary to-brand-secondary rounded-full mr-2 flex-shrink-0"></div>
                               <span className="truncate">{feature}</span>
                             </div>
                           ))}
@@ -297,7 +297,7 @@ const Portfolio = () => {
                             <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                             <span>Revenue Growth</span>
                           </div>
-                          <button className="text-blue-600 hover:text-blue-700 text-sm font-semibold flex items-center space-x-1 group/btn">
+                          <button className="text-brand-primary hover:text-brand-primary-dark text-sm font-semibold flex items-center space-x-1 group/btn">
                             <span>View Case Study</span>
                             <ArrowTopRightOnSquareIcon className="h-4 w-4 transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
                           </button>

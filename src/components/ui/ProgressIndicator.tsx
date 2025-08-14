@@ -57,7 +57,7 @@ const LinearProgress: React.FC<ProgressIndicatorProps> = ({
         {/* Progress Line */}
         <div className="absolute left-0 top-5 h-0.5 w-full bg-gray-200">
           <div 
-            className="h-full bg-gradient-to-r from-blue-600 to-purple-600 transition-all duration-500"
+            className="h-full bg-gradient-to-r from-brand-primary to-brand-secondary transition-all duration-500"
             style={{ width: `${((currentStep - 1) / (steps.length - 1)) * 100}%` }}
           />
         </div>
@@ -80,9 +80,9 @@ const LinearProgress: React.FC<ProgressIndicatorProps> = ({
                   w-10 h-10 rounded-full flex items-center justify-center
                   transition-all duration-300 transform
                   ${isCompleted 
-                    ? 'bg-gradient-to-r from-blue-600 to-purple-600 scale-100' 
+                    ? 'bg-gradient-to-r from-brand-primary to-brand-secondary scale-100' 
                     : isCurrent 
-                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 scale-110 ring-4 ring-blue-100' 
+                      ? 'bg-gradient-to-r from-brand-primary to-brand-secondary scale-110 ring-4 ring-brand-primary-light' 
                       : 'bg-gray-200 scale-100'
                   }
                 `}
@@ -99,7 +99,7 @@ const LinearProgress: React.FC<ProgressIndicatorProps> = ({
               {/* Step Label */}
               {showLabels && (
                 <div className="mt-3 text-center">
-                  <p className={`text-xs font-medium ${isCurrent ? 'text-blue-600' : isCompleted ? 'text-gray-900' : 'text-gray-500'}`}>
+                  <p className={`text-xs font-medium ${isCurrent ? 'text-brand-primary' : isCompleted ? 'text-gray-900' : 'text-gray-500'}`}>
                     {step.name}
                   </p>
                   {step.description && isCurrent && (
@@ -210,13 +210,13 @@ export const FormProgressBar: React.FC<FormProgressBarProps> = ({
         <span className="text-sm text-gray-600">
           Step {currentStep} of {totalSteps}
         </span>
-        <span className="text-sm font-semibold text-blue-600">
+        <span className="text-sm font-semibold text-brand-primary">
           {Math.round(progress)}%
         </span>
       </div>
       <div className="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
         <div
-          className="h-full bg-gradient-to-r from-blue-600 to-purple-600 rounded-full transition-all duration-500"
+          className="h-full bg-gradient-to-r from-brand-primary to-brand-secondary rounded-full transition-all duration-500"
           style={{ width: `${progress}%` }}
         />
       </div>

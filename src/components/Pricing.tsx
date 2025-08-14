@@ -124,10 +124,10 @@ const Pricing = () => {
         
         <div className="grid lg:grid-cols-3 gap-8">
           {pricingPlans.map((plan, index) => (
-            <div key={index} className={`card p-8 relative pricing-card ${plan.popular ? 'ring-2 ring-blue-600' : ''}`}>
+            <div key={index} className={`card p-8 relative pricing-card ${plan.popular ? 'ring-2 ring-brand-primary' : ''}`}>
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                  <span className="bg-brand-primary text-white px-4 py-2 rounded-full text-sm font-semibold">
                     Most Popular
                   </span>
                 </div>
@@ -135,7 +135,7 @@ const Pricing = () => {
               
               <div className="text-center mb-8">
                 <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-                <div className="text-4xl font-bold text-blue-600 mb-2">
+                <div className="text-4xl font-bold text-brand-primary mb-2">
                   {plan.price}
                   <span className="text-lg text-gray-600 font-normal">/{plan.period}</span>
                 </div>
@@ -155,7 +155,7 @@ const Pricing = () => {
                 href="#contact" 
                 className={`block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 animated-btn ${
                   plan.popular 
-                    ? 'bg-blue-600 text-white hover:bg-blue-700' 
+                    ? 'bg-brand-primary text-white hover:bg-brand-primary-dark' 
                     : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
                 }`}
               >

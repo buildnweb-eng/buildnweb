@@ -239,7 +239,7 @@ const InteractivePricing = () => {
                       className="flex items-center justify-between p-4 bg-white rounded-lg border"
                     >
                       <div className="flex items-center space-x-3">
-                        <addon.icon className="h-5 w-5 text-blue-600" />
+                        <addon.icon className="h-5 w-5 text-brand-primary" />
                         <div>
                           <div className="font-medium text-gray-900">
                             {addon.label}
@@ -291,7 +291,7 @@ const InteractivePricing = () => {
 
                 <div className="bg-white rounded-xl p-6 mb-6 border border-green-200">
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-blue-600 mb-2">
+                    <div className="text-3xl font-bold text-brand-primary mb-2">
                       {estimatedROI}% ROI
                     </div>
                     <div className="text-sm text-gray-600">

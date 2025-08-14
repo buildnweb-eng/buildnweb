@@ -62,13 +62,13 @@ const BackToTop: React.FC = () => {
                 fill="none"
                 strokeDasharray={`${2 * Math.PI * 24}`}
                 strokeDashoffset={`${2 * Math.PI * 24 * (1 - scrollProgress / 100)}`}
-                className="text-blue-600 transition-all duration-300"
+                className="text-brand-primary transition-all duration-300"
               />
             </svg>
             
             {/* Button */}
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg group-hover:shadow-xl transform transition-all duration-300 group-hover:scale-110">
+              <div className="bg-gradient-to-r from-brand-primary to-brand-secondary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg group-hover:shadow-xl transform transition-all duration-300 group-hover:scale-110">
                 <ArrowUpIcon className="h-5 w-5" />
               </div>
             </div>

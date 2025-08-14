@@ -28,7 +28,7 @@ const Header = () => {
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center">
               <div className="flex items-center space-x-2">
-                <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center">
+                <div className="w-10 h-10 bg-gradient-to-br from-brand-primary to-brand-secondary rounded-xl flex items-center justify-center">
                   <span className="text-white font-bold text-lg">TC</span>
                 </div>
                 <div className="text-2xl font-bold gradient-text">
@@ -43,56 +43,56 @@ const Header = () => {
             >
               <a
                 href="#home"
-                className="text-gray-700 hover:text-blue-600 font-medium transition-all duration-300 relative group"
+                className="text-gray-700 hover:text-brand-primary font-medium transition-all duration-300 relative group"
                 aria-label="Navigate to Home"
               >
                 Home
                 <span
-                  className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 group-hover:w-full transition-all duration-300"
+                  className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-brand-primary to-brand-secondary group-hover:w-full transition-all duration-300"
                   aria-hidden="true"
                 ></span>
               </a>
               <a
                 href="#about"
-                className="text-gray-700 hover:text-blue-600 font-medium transition-all duration-300 relative group"
+                className="text-gray-700 hover:text-brand-primary font-medium transition-all duration-300 relative group"
                 aria-label="Navigate to About"
               >
                 About
                 <span
-                  className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 group-hover:w-full transition-all duration-300"
+                  className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-brand-primary to-brand-secondary group-hover:w-full transition-all duration-300"
                   aria-hidden="true"
                 ></span>
               </a>
               <a
                 href="#services"
-                className="text-gray-700 hover:text-blue-600 font-medium transition-all duration-300 relative group"
+                className="text-gray-700 hover:text-brand-primary font-medium transition-all duration-300 relative group"
                 aria-label="Navigate to Services"
               >
                 Services
                 <span
-                  className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 group-hover:w-full transition-all duration-300"
+                  className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-brand-primary to-brand-secondary group-hover:w-full transition-all duration-300"
                   aria-hidden="true"
                 ></span>
               </a>
               <a
                 href="#portfolio"
-                className="text-gray-700 hover:text-blue-600 font-medium transition-all duration-300 relative group"
+                className="text-gray-700 hover:text-brand-primary font-medium transition-all duration-300 relative group"
                 aria-label="Navigate to Portfolio"
               >
                 Portfolio
                 <span
-                  className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 group-hover:w-full transition-all duration-300"
+                  className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-brand-primary to-brand-secondary group-hover:w-full transition-all duration-300"
                   aria-hidden="true"
                 ></span>
               </a>
               <a
                 href="#contact"
-                className="text-gray-700 hover:text-blue-600 font-medium transition-all duration-300 relative group"
+                className="text-gray-700 hover:text-brand-primary font-medium transition-all duration-300 relative group"
                 aria-label="Navigate to Contact"
               >
                 Contact
                 <span
-                  className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 group-hover:w-full transition-all duration-300"
+                  className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-brand-primary to-brand-secondary group-hover:w-full transition-all duration-300"
                   aria-hidden="true"
                 ></span>
               </a>
@@ -101,7 +101,7 @@ const Header = () => {
             <div className="hidden md:flex items-center space-x-4">
               <a
                 href="#contact"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2.5 rounded-xl font-semibold transition-all duration-300 hover:shadow-lg hover:scale-105 animated-btn"
+                className="bg-gradient-to-r from-brand-primary to-brand-secondary text-white px-6 py-2.5 rounded-xl font-semibold transition-all duration-300 hover:shadow-lg hover:scale-105 animated-btn"
               >
                 Book Strategy Call
               </a>

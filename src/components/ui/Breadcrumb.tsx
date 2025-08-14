@@ -54,7 +54,7 @@ export const Breadcrumb: React.FC<BreadcrumbProps> = ({
               {item.href && !isLast ? (
                 <a
                   href={item.href}
-                  className="flex items-center space-x-1 text-sm text-gray-600 hover:text-blue-600 transition-colors"
+                  className="flex items-center space-x-1 text-sm text-gray-600 hover:text-brand-primary transition-colors"
                 >
                   {item.icon && <span>{item.icon}</span>}
                   <span>{item.label}</span>
@@ -62,7 +62,7 @@ export const Breadcrumb: React.FC<BreadcrumbProps> = ({
               ) : (
                 <span
                   className={`flex items-center space-x-1 text-sm ${
-                    isLast ? 'text-blue-600 font-medium' : 'text-gray-600'
+                    isLast ? 'text-brand-primary font-medium' : 'text-gray-600'
                   }`}
                   aria-current={isLast ? 'page' : undefined}
                 >
@@ -105,13 +105,13 @@ export const MobileBreadcrumb: React.FC<BreadcrumbProps> = ({
         {previousItem && (
           <a
             href={previousItem.href}
-            className="flex items-center space-x-1 text-sm text-gray-600 hover:text-blue-600 transition-colors"
+            className="flex items-center space-x-1 text-sm text-gray-600 hover:text-brand-primary transition-colors"
           >
             <ChevronRightIcon className="h-4 w-4 rotate-180" />
             <span>Back to {previousItem.label}</span>
           </a>
         )}
-        <span className="text-sm font-medium text-blue-600">
+        <span className="text-sm font-medium text-brand-primary">
           {currentItem.label}
         </span>
       </div>

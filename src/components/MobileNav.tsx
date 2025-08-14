@@ -68,7 +68,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose }) => {
           >
             <div className="flex items-center justify-between p-6 border-b border-gray-100">
               <div className="flex items-center space-x-2">
-                <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center">
+                <div className="w-10 h-10 bg-gradient-to-br from-brand-primary to-brand-secondary rounded-xl flex items-center justify-center">
                   <span className="text-white font-bold text-lg">TC</span>
                 </div>
                 <span className="font-bold text-lg gradient-text">Menu</span>
@@ -100,8 +100,8 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose }) => {
                         className="flex items-center space-x-3 px-4 py-3 rounded-xl hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 transition-colors group"
                         aria-label={`Navigate to ${item.label}`}
                       >
-                        <Icon className="h-5 w-5 text-gray-500 group-hover:text-blue-600 transition-colors" />
-                        <span className="text-gray-700 font-medium group-hover:text-blue-600 transition-colors">
+                        <Icon className="h-5 w-5 text-gray-500 group-hover:text-brand-primary transition-colors" />
+                        <span className="text-gray-700 font-medium group-hover:text-brand-primary transition-colors">
                           {item.label}
                         </span>
                       </a>
@@ -119,7 +119,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose }) => {
                 <a
                   href="#contact"
                   onClick={handleItemClick}
-                  className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:shadow-lg hover:scale-105"
+                  className="block w-full bg-gradient-to-r from-brand-primary to-brand-secondary text-white text-center px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:shadow-lg hover:scale-105"
                   aria-label="Get started with our services"
                 >
                   Get Started

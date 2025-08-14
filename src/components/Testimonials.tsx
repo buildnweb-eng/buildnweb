@@ -33,8 +33,8 @@ const Testimonials = () => {
       industry: "SaaS",
       partnership: "3x demo bookings",
       metric: "+285% revenue",
-      icon: <RocketLaunchIcon className="h-8 w-8 text-blue-600" />,
-      gradient: "from-blue-500 to-cyan-500",
+      icon: <RocketLaunchIcon className="h-8 w-8 text-brand-primary" />,
+      gradient: "from-brand-primary to-brand-info",
     },
     {
       id: 2,
@@ -51,7 +51,7 @@ const Testimonials = () => {
       industry: "Enterprise SaaS",
       partnership: "5x lead quality",
       metric: "+420% pipeline",
-      icon: <AcademicCapIcon className="h-8 w-8 text-green-600" />,
+      icon: <AcademicCapIcon className="h-8 w-8 text-brand-accent" />,
       gradient: "from-green-500 to-emerald-500",
     },
   ];
@@ -118,7 +118,7 @@ const Testimonials = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <div className="mb-4">
-            <span className="inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+            <span className="inline-flex items-center bg-gradient-to-r from-brand-primary to-brand-secondary text-white px-4 py-2 rounded-full text-sm font-semibold">
               <SparklesIcon className="h-4 w-4 mr-2" />
               Proven SaaS Growth Results
             </span>
@@ -159,10 +159,10 @@ const Testimonials = () => {
                   <p className="text-gray-600 text-sm mb-2">
                     {leader.industry}
                   </p>
-                  <div className="text-sm font-semibold text-blue-600 mb-1">
+                  <div className="text-sm font-semibold text-brand-primary mb-1">
                     {leader.partnership}
                   </div>
-                  <div className="text-xs text-green-600 font-medium">
+                  <div className="text-xs text-brand-accent font-medium">
                     {leader.metric}
                   </div>
                 </div>
@@ -185,25 +185,25 @@ const Testimonials = () => {
 
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-4xl font-bold text-blue-600 mb-2 stat-number">
+              <div className="text-4xl font-bold text-brand-primary mb-2 stat-number">
                 3x
               </div>
               <div className="text-gray-600">Demo Bookings</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-green-600 mb-2 stat-number">
+              <div className="text-4xl font-bold text-brand-accent mb-2 stat-number">
                 285%
               </div>
               <div className="text-gray-600">Avg Revenue Growth</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-purple-600 mb-2 stat-number">
+              <div className="text-4xl font-bold text-brand-secondary mb-2 stat-number">
                 7
               </div>
               <div className="text-gray-600">Day Launch</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-orange-600 mb-2 stat-number">
+              <div className="text-4xl font-bold text-brand-warning mb-2 stat-number">
                 100%
               </div>
               <div className="text-gray-600">ROI Guarantee</div>

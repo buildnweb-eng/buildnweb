@@ -32,7 +32,7 @@ const Footer = () => {
             <div className="flex space-x-4">
               <a
                 href="#"
-                className="w-10 h-10 bg-white/10 hover:bg-blue-600 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110"
+                className="w-10 h-10 bg-white/10 hover:bg-brand-primary rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110"
               >
                 <span className="text-sm font-bold">f</span>
               </a>

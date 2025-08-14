@@ -33,7 +33,7 @@ const About = () => {
       title: "SaaS Audit & Strategy",
       description:
         "Deep dive into your current conversion funnel and demo booking process",
-      icon: <MagnifyingGlassIcon className="h-8 w-8 text-blue-600" />,
+      icon: <MagnifyingGlassIcon className="h-8 w-8 text-brand-primary" />,
       whatWeDo: [
         "Free conversion audit call",
         "SaaS competitor analysis",
@@ -41,7 +41,7 @@ const About = () => {
         "ICP & messaging optimization",
       ],
       deliverable: "SaaS growth strategy document",
-      gradient: "from-blue-500 to-cyan-500",
+      gradient: "from-brand-primary to-brand-secondary",
     },
     {
       step: "Step 2",
@@ -49,7 +49,9 @@ const About = () => {
       title: "Conversion Blueprint",
       description:
         "Custom conversion strategy based on proven SaaS growth frameworks",
-      icon: <ClipboardDocumentListIcon className="h-8 w-8 text-purple-600" />,
+      icon: (
+        <ClipboardDocumentListIcon className="h-8 w-8 text-brand-secondary" />
+      ),
       whatWeDo: [
         "Demo booking optimization strategy",
         "Conversion funnel wireframes",
@@ -57,14 +59,14 @@ const About = () => {
         "Analytics & tracking blueprint",
       ],
       deliverable: "Conversion-optimized wireframes",
-      gradient: "from-purple-500 to-violet-500",
+      gradient: "from-brand-secondary to-brand-primary",
     },
     {
       step: "Step 3",
       days: "Day 5-6",
       title: "Revenue-Focused Build",
       description: "High-converting SaaS website built for demo bookings",
-      icon: <ComputerDesktopIcon className="h-8 w-8 text-green-600" />,
+      icon: <ComputerDesktopIcon className="h-8 w-8 text-brand-accent" />,
       whatWeDo: [
         "Conversion-optimized design",
         "Demo booking forms & CTAs",
@@ -72,7 +74,7 @@ const About = () => {
         "Analytics & heat map setup",
       ],
       deliverable: "Demo-ready SaaS website",
-      gradient: "from-green-500 to-emerald-500",
+      gradient: "from-brand-accent to-brand-primary",
     },
     {
       step: "Step 4",
@@ -80,7 +82,7 @@ const About = () => {
       title: "Launch & Guarantee",
       description:
         "Go live with ROI guarantee and immediate conversion tracking",
-      icon: <RocketLaunchIcon className="h-8 w-8 text-orange-600" />,
+      icon: <RocketLaunchIcon className="h-8 w-8 text-brand-warning" />,
       whatWeDo: [
         "Demo booking testing",
         "Conversion tracking setup",
@@ -95,7 +97,7 @@ const About = () => {
       days: "30-Day",
       title: "ROI Validation",
       description: "Measure and optimize for guaranteed revenue growth",
-      icon: <ChartBarIcon className="h-8 w-8 text-indigo-600" />,
+      icon: <ChartBarIcon className="h-8 w-8 text-brand-secondary" />,
       whatWeDo: [
         "Demo booking optimization",
         "A/B testing & conversion optimization",
@@ -103,7 +105,7 @@ const About = () => {
         "Paid advertising campaign management",
       ],
       deliverable: "Monthly performance reports & growth strategies",
-      gradient: "from-indigo-500 to-purple-500",
+      gradient: "from-brand-secondary to-brand-warning",
     },
   ];
 
@@ -163,7 +165,7 @@ const About = () => {
         {/* Proven Process Section */}
         <div className="text-center mb-16">
           <div className="mb-4">
-            <span className="inline-flex items-center bg-gradient-to-r from-green-600 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+            <span className="inline-flex items-center bg-gradient-to-r from-brand-accent to-brand-primary text-white px-4 py-2 rounded-full text-sm font-semibold">
               <SparklesIcon className="h-4 w-4 mr-2" />
               Our Proven Process
             </span>
@@ -261,16 +263,19 @@ const About = () => {
         <div className="bg-gradient-to-br from-green-50 via-blue-50 to-purple-50 rounded-3xl p-12 mb-16">
           <div className="text-center">
             <h3 className="text-3xl font-bold text-gray-900 mb-6">
-              Our{" "}
-              <span className="gradient-text">ROI Guarantee</span>
+              Our <span className="gradient-text">ROI Guarantee</span>
             </h3>
             <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed mb-8">
-              We guarantee measurable revenue growth within 30 days, or we'll refund your investment and optimize for free until you see results.
+              We guarantee measurable revenue growth within 30 days, or we&apos;ll
+              refund your investment and optimize for free until you see
+              results.
             </p>
             <div className="bg-white rounded-xl p-6 border border-green-200 max-w-2xl mx-auto mb-8">
               <div className="flex items-center justify-center space-x-3 mb-3">
                 <ShieldCheckIcon className="h-6 w-6 text-green-600" />
-                <span className="font-bold text-green-800">Money-Back Guarantee Terms</span>
+                <span className="font-bold text-green-800">
+                  Money-Back Guarantee Terms
+                </span>
               </div>
               <ul className="text-sm text-gray-700 space-y-1">
                 <li>• 7-day launch or full refund</li>
@@ -281,19 +286,17 @@ const About = () => {
             </div>
             <div className="grid md:grid-cols-3 gap-8 mt-12">
               <div className="text-center">
-                <div className="text-4xl font-bold text-green-600 mb-2">
-                  3x
-                </div>
+                <div className="text-4xl font-bold text-green-600 mb-2">3x</div>
                 <div className="text-gray-600">Demo Bookings</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-2">
+                <div className="text-4xl font-bold text-brand-primary mb-2">
                   7 Days
                 </div>
                 <div className="text-gray-600">Launch Guarantee</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-purple-600 mb-2">
+                <div className="text-4xl font-bold text-brand-secondary mb-2">
                   30 Days
                 </div>
                 <div className="text-gray-600">ROI Validation</div>
@@ -305,7 +308,7 @@ const About = () => {
         {/* About Section */}
         <div className="text-center mb-16">
           <div className="mb-4">
-            <span className="inline-flex items-center bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+            <span className="inline-flex items-center bg-gradient-to-r from-brand-secondary to-brand-primary text-white px-4 py-2 rounded-full text-sm font-semibold">
               <SparklesIcon className="h-4 w-4 mr-2" />
               SaaS Growth Specialists
             </span>
@@ -327,9 +330,9 @@ const About = () => {
         <div className="grid lg:grid-cols-2 xl:grid-cols-4 gap-8">
           <div className="group hover-lift">
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-brand-primary to-brand-info rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
               <div className="relative bg-white rounded-2xl p-8 text-center shadow-modern">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-brand-primary to-brand-info rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <CodeBracketIcon className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-gray-900">
@@ -399,7 +402,7 @@ const About = () => {
         </div>
 
         {/* Mission Section */}
-        <div className="mt-20 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 rounded-3xl p-12">
+        <div className="mt-20 bg-gradient-to-br from-blue-50 via-purple-50 to-blue-50 rounded-3xl p-12">
           <div className="text-center">
             <h3 className="text-3xl font-bold text-gray-900 mb-6">
               Our <span className="gradient-text">Mission</span>
@@ -412,17 +415,19 @@ const About = () => {
             </p>
             <div className="grid md:grid-cols-3 gap-8 mt-12">
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600 mb-2">50+</div>
+                <div className="text-3xl font-bold text-brand-primary mb-2">
+                  50+
+                </div>
                 <div className="text-gray-600">Years Combined Experience</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-600 mb-2">
+                <div className="text-3xl font-bold text-brand-secondary mb-2">
                   340%
                 </div>
                 <div className="text-gray-600">Average Client ROI</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-600 mb-2">
+                <div className="text-3xl font-bold text-brand-accent mb-2">
                   7 Days
                 </div>
                 <div className="text-gray-600">Delivery Guarantee</div>
