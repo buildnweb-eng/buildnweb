@@ -110,6 +110,40 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose }) => {
                 })}
               </ul>
 
+              {/* Service Pages */}
+              <div className="mt-6 px-4">
+                <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">Our Services</h3>
+                <ul className="space-y-1">
+                  <li>
+                    <a
+                      href="/services/saas-website-development"
+                      onClick={handleItemClick}
+                      className="flex items-center px-4 py-2 text-sm text-gray-600 hover:text-brand-primary hover:bg-brand-primary-light rounded-lg transition-colors"
+                    >
+                      SaaS Website Development
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/services/ecommerce-development"
+                      onClick={handleItemClick}
+                      className="flex items-center px-4 py-2 text-sm text-gray-600 hover:text-brand-primary hover:bg-brand-primary-light rounded-lg transition-colors"
+                    >
+                      E-commerce Development
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/services/service-business-websites"
+                      onClick={handleItemClick}
+                      className="flex items-center px-4 py-2 text-sm text-gray-600 hover:text-brand-primary hover:bg-brand-primary-light rounded-lg transition-colors"
+                    >
+                      Service Business Websites
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}

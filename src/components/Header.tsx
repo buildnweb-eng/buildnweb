@@ -63,17 +63,43 @@ const Header = () => {
                   aria-hidden="true"
                 ></span>
               </a>
-              <a
-                href="#services"
-                className="text-gray-700 hover:text-brand-primary font-medium transition-all duration-300 relative group"
-                aria-label="Navigate to Services"
-              >
-                Services
-                <span
-                  className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-brand-primary to-brand-secondary group-hover:w-full transition-all duration-300"
-                  aria-hidden="true"
-                ></span>
-              </a>
+              <div className="relative group">
+                <a
+                  href="#services"
+                  className="text-gray-700 hover:text-brand-primary font-medium transition-all duration-300 relative group"
+                  aria-label="Navigate to Services"
+                >
+                  Services
+                  <span
+                    className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-brand-primary to-brand-secondary group-hover:w-full transition-all duration-300"
+                    aria-hidden="true"
+                  ></span>
+                </a>
+                
+                {/* Services Dropdown */}
+                <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                  <div className="bg-white rounded-xl shadow-xl border border-gray-100 py-4 px-6 min-w-[280px]">
+                    <a
+                      href="/services/saas-website-development"
+                      className="block py-2 px-3 text-gray-600 hover:text-brand-primary hover:bg-brand-primary-light rounded-lg transition-all duration-200"
+                    >
+                      SaaS Website Development
+                    </a>
+                    <a
+                      href="/services/ecommerce-development"
+                      className="block py-2 px-3 text-gray-600 hover:text-brand-primary hover:bg-brand-primary-light rounded-lg transition-all duration-200"
+                    >
+                      E-commerce Development
+                    </a>
+                    <a
+                      href="/services/service-business-websites"
+                      className="block py-2 px-3 text-gray-600 hover:text-brand-primary hover:bg-brand-primary-light rounded-lg transition-all duration-200"
+                    >
+                      Service Business Websites
+                    </a>
+                  </div>
+                </div>
+              </div>
               <a
                 href="#portfolio"
                 className="text-gray-700 hover:text-brand-primary font-medium transition-all duration-300 relative group"

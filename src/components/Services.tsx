@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
@@ -10,6 +11,7 @@ import {
   AcademicCapIcon,
   CheckIcon,
   SparklesIcon,
+  ArrowRightIcon,
 } from "@heroicons/react/24/outline";
 import { ServiceCardSkeleton } from "@/components/ui/Skeleton";
 
@@ -35,6 +37,7 @@ const Services = () => {
         "Analytics dashboard",
       ],
       gradient: "from-brand-primary to-brand-secondary",
+      href: "/services/saas-website-development",
     },
     {
       icon: <DevicePhoneMobileIcon className="h-12 w-12 text-brand-accent" />,
@@ -48,6 +51,7 @@ const Services = () => {
         "Revenue analytics",
       ],
       gradient: "from-brand-accent to-brand-primary",
+      href: "/services/ecommerce-development",
     },
     {
       icon: <ComputerDesktopIcon className="h-12 w-12 text-brand-secondary" />,
@@ -61,6 +65,7 @@ const Services = () => {
         "Appointment booking",
       ],
       gradient: "from-brand-secondary to-brand-primary",
+      href: "/services/service-business-websites",
     },
   ];
 
@@ -171,9 +176,9 @@ const Services = () => {
             </>
           ) : (
             services.map((service, index) => (
-              <div key={index} className="group service-card cursor-pointer">
+              <Link key={index} href={service.href} className="group service-card">
                 <div
-                  className={`relative bg-gradient-to-br ${service.gradient} p-1 rounded-2xl`}
+                  className={`relative bg-gradient-to-br ${service.gradient} p-1 rounded-2xl transition-all duration-300 group-hover:shadow-xl`}
                 >
                   <div className="bg-white rounded-2xl p-8 h-full">
                     <div className="flex items-start space-x-6">
@@ -189,13 +194,13 @@ const Services = () => {
                         </div>
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-2xl font-bold mb-3 text-gray-900">
+                        <h3 className="text-2xl font-bold mb-3 text-gray-900 group-hover:text-brand-primary transition-colors">
                           {service.title}
                         </h3>
                         <p className="text-gray-600 mb-6 leading-relaxed">
                           {service.description}
                         </p>
-                        <div className="grid grid-cols-2 gap-2">
+                        <div className="grid grid-cols-2 gap-2 mb-4">
                           {service.features.map((feature, i) => (
                             <div
                               key={i}
@@ -208,6 +213,12 @@ const Services = () => {
                             </div>
                           ))}
                         </div>
+                        
+                        {/* Learn More Button */}
+                        <div className="flex items-center text-brand-primary font-semibold opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                          <span>Learn More</span>
+                          <ArrowRightIcon className="h-4 w-4 ml-2 transform transition-transform group-hover:translate-x-1" />
+                        </div>
                       </div>
                     </div>
 
@@ -215,7 +226,7 @@ const Services = () => {
                     <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))
           )}
         </div>
